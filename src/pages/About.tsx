@@ -1,6 +1,6 @@
 import "./About.scss";
 const About = () => {
-  return <div>About</div>;
+  return <article className="about container">About</article>;
 };
 
 export default About;

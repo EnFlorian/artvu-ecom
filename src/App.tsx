@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Products from "./pages/Products";
+import Auth from "./pages/Auth";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/auth" element={<Auth />} />
       </Routes>
       <Footer />
     </Router>
