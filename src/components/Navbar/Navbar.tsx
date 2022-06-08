@@ -22,10 +22,12 @@ const Navbar = () => {
         </ul>
         <ul className="navbar__navlinks">
           <li className="navbar__navlink">
-            Cart
+            <Link to="/cart">Cart</Link>
             <FaShoppingCart className="navbar__shopping-cart" />
           </li>
-          <li className="navbar__navlink">Login</li>
+          <li className="navbar__navlink">
+            <Link to="/auth">Login</Link>
+          </li>
         </ul>
       </div>
     </nav>
