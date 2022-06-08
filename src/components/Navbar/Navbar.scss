@@ -1,0 +1,24 @@
+.navbar {
+  background-color: var(--clr-dark);
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: var(--navbar-height);
+    color: var(--clr-text-light);
+  }
+
+  &__logo {
+    font-size: 2rem;
+  }
+
+  &__navlinks {
+    display: flex;
+    align-items: center;
+  }
+
+  &__navlink {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+  }
+}

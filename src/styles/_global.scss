@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --font-primary: "Poppins", sans-serif;
+  --navbar-height: 50px;
+  --footer-height: 50px;
+  --transition: all 0.2s ease-in-out;
+
+  --clr-dark: hsl(0, 15%, 15%);
+  --clr-medium: hsl(0, 15%, 25%);
+  --clr-light: hsl(26, 60%, 60%);
+  --clr-lighter: hsl(33, 100%, 95%);
+
+  --clr-text-dark: hsl(0, 0%, 8%);
+  --clr-text-medium: hsl(0, 0%, 15%);
+  --clr-text-light: hsl(0, 0%, 90%);
+
+  --clr-danger-dark: hsl(0, 100%, 30%);
+  --clr-danger-medium: hsl(0, 100%, 70%);
+  --clr-danger-light: hsl(0, 100%, 90%);
+
+  --clr-footer: var(--clr-dark);
+  --clr-navbar: var(--clr-dark);
+
+  --clr-accent: hsl(205, 61%, 95%);
+
+  --toastify-color-dark: hsl(0, 0%, 14%);
+  --toastify-color-success: var(--clr-accent);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Scrollbar */
+/* Width */
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--clr-lighter);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--clr-dark);
+  height: 2rem;
+  /* border-radius: 1rem; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-dark);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }

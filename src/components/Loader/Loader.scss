@@ -1,0 +1,24 @@
+.loaders {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  &__spinner {
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto;
+    margin-top: 10rem;
+    border-radius: 50%;
+    border: 10px solid var(--clr-dark);
+    border-top-color: var(--clr-light);
+    animation: spinner 0.8s linear infinite;
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
