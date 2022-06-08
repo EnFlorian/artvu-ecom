@@ -1,7 +1,12 @@
 import Loader from "../components/Loader";
+import "./Products.scss";
 
 const Products = () => {
-  return <Loader />;
+  return (
+    <section className="products">
+      <Loader />
+    </section>
+  );
 };
 
 export default Products;

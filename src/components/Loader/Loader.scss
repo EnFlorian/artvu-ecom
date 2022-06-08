@@ -1,4 +1,4 @@
-.loaders {
+.loader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,8 +11,8 @@
     margin: 0 auto;
     margin-top: 10rem;
     border-radius: 50%;
-    border: 10px solid var(--clr-dark);
-    border-top-color: var(--clr-light);
+    border: 10px solid var(--clr-medium);
+    border-top-color: var(--clr-accent-medium);
     animation: spinner 0.8s linear infinite;
   }
 }
