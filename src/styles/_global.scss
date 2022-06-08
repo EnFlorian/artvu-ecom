@@ -22,7 +22,9 @@
   --clr-footer: var(--clr-dark);
   --clr-navbar: var(--clr-dark);
 
-  --clr-accent: hsl(205, 61%, 95%);
+  --clr-accent-dark: hsl(205, 61%, 65%);
+  --clr-accent-medium: hsl(205, 61%, 70%);
+  --clr-accent-light: hsl(205, 61%, 95%);
 
   --toastify-color-dark: hsl(0, 0%, 14%);
   --toastify-color-success: var(--clr-accent);
