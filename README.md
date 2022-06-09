@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# 🎨 Artvu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### A custom website with shop functionality for an art shop/gallery.
 
-## Available Scripts
+## 📖 Notable Features
+- Clientside Filter functionality
+- Clientside Pagination
+- Fully responsive
 
-In the project directory, you can run:
 
-### `npm start`
+## 👩‍💻 Live Demo
+##### Go To something.com
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Logins (Demo)**  
+**Username:** User  
+**Password:** 1234
 
-### `npm test`
+  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚒ Installation/Setup
+The installation requires at least **node version >10.4**
 
-### `npm run build`
+```Shell
+# run in the root directory of the project
+npm install
+npm run start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# run in the root directory of the project
+yarn add 
+yarn run start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📚 Technical Informations
 
-### `npm run eject`
+#### Technologies used
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+| Technology              | Description                            |
+|-------------------------|----------------------------------------|
+| Typescript              |   As programming language              |
+| React                   |   For the frontend.                    |
+| React Hooks             |   For the fetching of the API.         | 
+| React Context           |   For managing global state and avoiding prop drilling         | 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Implementation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
