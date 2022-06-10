@@ -19,3 +19,14 @@ export interface IProductContext {
 export type ProductActionType =
   | { type: typeof FETCH_PRODUCT; payload: IProduct }
   | { type: typeof FETCH_PRODUCTS; payload: IProduct[] };
+
+type ProductType = {
+  id: number;
+  name: string;
+  creator: string;
+  description: string;
+  price: number;
+  image: string;
+  category: string;
+  onlineOrdering: boolean;
+};
