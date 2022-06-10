@@ -3,7 +3,7 @@ export const products = [
     id: 1,
     name: "Product 1",
     creator: "Maximilian Fabour",
-    price: 10,
+    price: 10.23,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/0_lm6uzt.jpg",
@@ -15,7 +15,7 @@ export const products = [
     id: 2,
     name: "Product 2",
     creator: "Maximilian Fabour",
-    price: 20,
+    price: 20.25,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/1_ynlep4.jpg",
@@ -26,7 +26,7 @@ export const products = [
     id: 3,
     name: "Product 3",
     creator: "Maximilian Fabour",
-    price: 30,
+    price: 30.66,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/2_igrdk2.jpg",
@@ -37,7 +37,7 @@ export const products = [
     id: 4,
     name: "Product 4",
     creator: "Maximilian Fabour",
-    price: 40,
+    price: 40.66,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/3_hps1mi.jpg",
@@ -48,7 +48,7 @@ export const products = [
     id: 5,
     name: "Product 5",
     creator: "Maximilian Fabour",
-    price: 50,
+    price: 50.32,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/4_xp9z4y.jpg",
     category: "modern",
@@ -58,7 +58,7 @@ export const products = [
     id: 6,
     name: "Product 6",
     creator: "Maximilian Fabour",
-    price: 60,
+    price: 60.68,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/5_lks2av.jpg",
     category: "modern",
@@ -68,7 +68,7 @@ export const products = [
     id: 7,
     name: "Product 7",
     creator: "Maximilian Fabour",
-    price: 70,
+    price: 70.61,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/6_stysia.jpg",
@@ -79,7 +79,7 @@ export const products = [
     id: 8,
     name: "Product 8",
     creator: "Maximilian Fabour",
-    price: 80,
+    price: 80.77,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/7_tiz21h.jpg",
@@ -90,7 +90,7 @@ export const products = [
     id: 9,
     name: "Product 9",
     creator: "Maximilian Fabour",
-    price: 90,
+    price: 90.55,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/8_r4st94.jpg",

@@ -1,7 +1,6 @@
 .product-card {
   display: flex;
   flex-direction: column;
-
   width: 24rem;
   height: auto;
 
@@ -21,12 +20,13 @@
   }
   &__name {
     font-size: 1.2rem;
+    font-weight: 300;
     color: var(--clr-dark);
   }
 
   &__price {
     font-size: 1.2rem;
-    font-weight: bold;
+
     color: var(--clr-dark);
   }
 }
