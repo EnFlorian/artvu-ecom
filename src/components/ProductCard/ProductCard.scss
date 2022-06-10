@@ -1,0 +1,32 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+
+  width: 24rem;
+  height: auto;
+
+  &__image {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    background-size: cover;
+    margin-bottom: 0.5rem;
+    border-radius: 0.3rem;
+  }
+  &__info {
+    padding: 0 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__name {
+    font-size: 1.2rem;
+    color: var(--clr-dark);
+  }
+
+  &__price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--clr-dark);
+  }
+}
