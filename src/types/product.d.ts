@@ -6,6 +6,8 @@ export interface IProduct {
   creator: string;
   description: string;
   price: number;
+  stock: number;
+  additionalImages: string[];
 }
 
 export interface IProductState {

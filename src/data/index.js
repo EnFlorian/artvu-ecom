@@ -9,6 +9,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/0_lm6uzt.jpg",
     category: "Landscape Painting",
     onlineOrdering: true,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
 
   {
@@ -21,6 +29,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/1_ynlep4.jpg",
     category: "Landscape Painting",
     onlineOrdering: true,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 3,
@@ -32,6 +48,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/2_igrdk2.jpg",
     category: "Landscape Painting",
     onlineOrdering: true,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 4,
@@ -43,6 +67,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/3_hps1mi.jpg",
     category: "Still Painting",
     onlineOrdering: true,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 5,
@@ -53,6 +85,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/4_xp9z4y.jpg",
     category: "Still Painting",
     onlineOrdering: true,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 6,
@@ -63,6 +103,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/5_lks2av.jpg",
     category: "Modern Painting",
     onlineOrdering: true,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 7,
@@ -74,6 +122,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/6_stysia.jpg",
     category: "Landscape Painting",
     onlineOrdering: true,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 8,
@@ -85,6 +141,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/7_tiz21h.jpg",
     category: "Landscape Painting",
     onlineOrdering: true,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 9,
@@ -96,6 +160,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/8_r4st94.jpg",
     category: "Historical Painting",
     onlineOrdering: true,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 10,
@@ -107,6 +179,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/9_nextou.jpg",
     category: "Modern Painting",
     onlineOrdering: true,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 11,
@@ -118,6 +198,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816634/art/10_mvtquu.jpg",
     category: "Historical Painting",
     onlineOrdering: true,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 12,
@@ -129,6 +217,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816634/art/11_bzqoxt.jpg",
     category: "Modern Painting",
     onlineOrdering: true,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 13,
@@ -140,6 +236,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816634/art/12_fxnxvx.jpg",
     category: "Modern Painting",
     onlineOrdering: false,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 14,
@@ -151,6 +255,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816634/art/13_loqt48.jpg",
     category: "Historical Painting",
     onlineOrdering: false,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 15,
@@ -162,6 +274,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816634/art/14_dh5508.jpg",
     category: "Landscape Painting",
     onlineOrdering: false,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 16,
@@ -173,6 +293,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816635/art/15_oquwkp.jpg",
     category: "Modern Painting",
     onlineOrdering: false,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 17,
@@ -184,6 +312,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816635/art/16_z8a0i5.jpg",
     category: "Landscape Painting",
     onlineOrdering: false,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 18,
@@ -195,6 +331,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816636/art/17_ssqx09.jpg",
     category: "Modern Painting",
     onlineOrdering: false,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 19,
@@ -206,6 +350,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816634/art/18_qtlvsl.jpg",
     category: "Modern Painting",
     onlineOrdering: false,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 20,
@@ -217,6 +369,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816635/art/19_rdmgxy.jpg",
     category: "Modern Painting",
     onlineOrdering: false,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 21,
@@ -228,6 +388,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816635/art/20_ywtck7.jpg",
     category: "Modern Painting",
     onlineOrdering: false,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 22,
@@ -239,6 +407,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816636/art/21_otqlc3.jpg",
     category: "Historical Painting",
     onlineOrdering: false,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 23,
@@ -250,6 +426,14 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816635/art/22_mdkvag.jpg",
     category: "Modern Painting",
     onlineOrdering: false,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
   {
     id: 24,
@@ -261,5 +445,13 @@ export const products = [
     image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816636/art/23_as7y7l.jpg",
     category: "Modern Painting",
     onlineOrdering: false,
+    stock: 10,
+    additionalImages: [
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w4_dszhly.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w0_ihvve6.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w2_dgeua0.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w1_dkndjs.jpg",
+      "https://res.cloudinary.com/dymu62vtv/image/upload/v1654857781/art/w3_bi6uzx.jpg",
+    ],
   },
 ];
