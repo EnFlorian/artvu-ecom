@@ -6,8 +6,11 @@ export const products = [
     price: 10,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "./assets/images/products/0.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/0_lm6uzt.jpg",
+    category: "modern",
+    onlineOrdering: true,
   },
+
   {
     id: 2,
     name: "Product 2",
@@ -15,7 +18,9 @@ export const products = [
     price: 20,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/1.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/1_ynlep4.jpg",
+    category: "modern",
+    onlineOrdering: true,
   },
   {
     id: 3,
@@ -24,7 +29,9 @@ export const products = [
     price: 30,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/2.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/2_igrdk2.jpg",
+    category: "modern",
+    onlineOrdering: true,
   },
   {
     id: 4,
@@ -33,7 +40,9 @@ export const products = [
     price: 40,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/3.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/3_hps1mi.jpg",
+    category: "modern",
+    onlineOrdering: true,
   },
   {
     id: 5,
@@ -41,7 +50,9 @@ export const products = [
     creator: "Maximilian Fabour",
     price: 50,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: "@/assets/images/products/4.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/4_xp9z4y.jpg",
+    category: "modern",
+    onlineOrdering: true,
   },
   {
     id: 6,
@@ -49,7 +60,9 @@ export const products = [
     creator: "Maximilian Fabour",
     price: 60,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    image: "@/assets/images/products/5.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/5_lks2av.jpg",
+    category: "modern",
+    onlineOrdering: true,
   },
   {
     id: 7,
@@ -58,7 +71,9 @@ export const products = [
     price: 70,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/6.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816632/art/6_stysia.jpg",
+    category: "modern",
+    onlineOrdering: true,
   },
   {
     id: 8,
@@ -67,7 +82,9 @@ export const products = [
     price: 80,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/7.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/7_tiz21h.jpg",
+    category: "modern",
+    onlineOrdering: true,
   },
   {
     id: 9,
@@ -76,7 +93,9 @@ export const products = [
     price: 90,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/8.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/8_r4st94.jpg",
+    category: "modern",
+    onlineOrdering: true,
   },
   {
     id: 10,
@@ -85,7 +104,9 @@ export const products = [
     price: 100,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/9.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816633/art/9_nextou.jpg",
+    category: "modern",
+    onlineOrdering: true,
   },
   {
     id: 11,
@@ -94,7 +115,9 @@ export const products = [
     price: 110,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/10.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816634/art/10_mvtquu.jpg",
+    category: "modern",
+    onlineOrdering: true,
   },
   {
     id: 12,
@@ -103,7 +126,9 @@ export const products = [
     price: 120,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/11.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816634/art/11_bzqoxt.jpg",
+    category: "modern",
+    onlineOrdering: true,
   },
   {
     id: 13,
@@ -112,7 +137,9 @@ export const products = [
     price: 130,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/12.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816634/art/12_fxnxvx.jpg",
+    category: "modern",
+    onlineOrdering: false,
   },
   {
     id: 14,
@@ -121,7 +148,9 @@ export const products = [
     price: 140,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/13.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816634/art/13_loqt48.jpg",
+    category: "modern",
+    onlineOrdering: false,
   },
   {
     id: 15,
@@ -130,7 +159,9 @@ export const products = [
     price: 150,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/14.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816634/art/14_dh5508.jpg",
+    category: "modern",
+    onlineOrdering: false,
   },
   {
     id: 16,
@@ -139,7 +170,9 @@ export const products = [
     price: 160,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/15.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816635/art/15_oquwkp.jpg",
+    category: "modern",
+    onlineOrdering: false,
   },
   {
     id: 17,
@@ -148,7 +181,9 @@ export const products = [
     price: 170,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/16.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816635/art/16_z8a0i5.jpg",
+    category: "modern",
+    onlineOrdering: false,
   },
   {
     id: 18,
@@ -157,7 +192,9 @@ export const products = [
     price: 180,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/17.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816636/art/17_ssqx09.jpg",
+    category: "modern",
+    onlineOrdering: false,
   },
   {
     id: 19,
@@ -166,7 +203,9 @@ export const products = [
     price: 190,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/18.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816634/art/18_qtlvsl.jpg",
+    category: "modern",
+    onlineOrdering: false,
   },
   {
     id: 20,
@@ -175,7 +214,9 @@ export const products = [
     price: 200,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/19.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816635/art/19_rdmgxy.jpg",
+    category: "modern",
+    onlineOrdering: false,
   },
   {
     id: 21,
@@ -184,7 +225,9 @@ export const products = [
     price: 210,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/20.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816635/art/20_ywtck7.jpg",
+    category: "modern",
+    onlineOrdering: false,
   },
   {
     id: 22,
@@ -193,7 +236,9 @@ export const products = [
     price: 220,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/21.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816636/art/21_otqlc3.jpg",
+    category: "modern",
+    onlineOrdering: false,
   },
   {
     id: 23,
@@ -202,7 +247,9 @@ export const products = [
     price: 230,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/22.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816635/art/22_mdkvag.jpg",
+    category: "modern",
+    onlineOrdering: false,
   },
   {
     id: 24,
@@ -211,6 +258,8 @@ export const products = [
     price: 240,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget aliquam consectetur, nisl nunc aliquet nunc, euismod aliquam eros nunc euismod nunc.",
-    image: "@/assets/images/products/23.jpg",
+    image: "https://res.cloudinary.com/dymu62vtv/image/upload/v1654816636/art/23_as7y7l.jpg",
+    category: "modern",
+    onlineOrdering: false,
   },
 ];
