@@ -1,5 +1,5 @@
 .work {
-  background-color: var(--clr-lighter);
+  // background-color: var(--clr-lighter);
   padding: 4rem 0;
   width: 100vw;
 
@@ -35,7 +35,11 @@
   &__boni-item {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--clr-dark);
+    justify-content: center;
+    text-align: center;
+    border: 3px solid var(--clr-dark);
+    border-radius: 0.5rem;
+    background-color: var(--clr-light);
     height: 20rem;
     width: 24rem;
   }

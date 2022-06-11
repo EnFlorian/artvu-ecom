@@ -5,8 +5,11 @@ const WorkSection = () => {
     <article className="work">
       <div className="container work__wrapper">
         <section className="work__info">
-          <h1 className="work__title">Work</h1>
-          <p className="work__description">Lorem ipsum dolor sitamet, consectetur adipiscing elit.</p>
+          <h1 className="work__title">Work with Us</h1>
+          <p className="work__description">
+            Lorem ipsum dolor sitamet, consectetur adipiscing elit. Lorem ipsum dolor sitamet, consectetur adipiscing
+            elit.
+          </p>
         </section>
         <ul className="work__boni">
           <li className="work__boni-item">
