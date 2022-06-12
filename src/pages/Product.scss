@@ -1,4 +1,7 @@
 .product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
 
   &__wrapper {
@@ -7,9 +10,107 @@
     height: 100%;
   }
 
+  &__back-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-light);
+    color: var(--clr-neutral);
+    border-radius: 0.2rem;
+    width: 12rem;
+    height: 3rem;
+    margin: 4rem 0 2rem 0;
+    transition: var(--transition);
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  &__content {
+    display: flex;
+  }
+
   &__left-content {
     position: relative;
     display: flex;
+    flex-direction: column;
+    margin: 0 5rem 3rem 0rem;
     flex: 1;
+  }
+
+  &__image {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  &__more-images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.3rem;
+    width: 100;
+  }
+
+  &__image-small {
+    max-width: 7rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--clr-dark);
+  }
+
+  &__price {
+    color: var(--clr-light);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    color: var(--clr-medium);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--clr-light);
+  }
+
+  &__details-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+  }
+
+  &__details-item-title {
+    color: var(--clr-dark);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-right: 1rem;
+  }
+
+  &__details-item-value {
+    font-size: 1.1rem;
+    color: var(--clr-medium);
   }
 }
