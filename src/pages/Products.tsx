@@ -2,11 +2,19 @@ import "./Products.scss";
 import { FaThList } from "react-icons/fa";
 import { IoGridSharp } from "react-icons/io5";
 import ProductsGridView from "../components/ProductsGridView";
-import { useState } from "react";
+import React, { useState } from "react";
 import ProductsListView from "../components/ProductsListView";
 
 const Products = () => {
   const [isGridView, setIsGridView] = useState(true);
+  let activeElement: Element | null = null;
+
+  const handleClick = (event: React.MouseEvent) => {
+    event.preventDefault();
+    activeElement?.classList.remove("products__sidebar-item--active");
+    activeElement = event.currentTarget;
+    event.currentTarget.classList.toggle("products__sidebar-item--active");
+  };
 
   return (
     <section className="products container">
@@ -15,13 +23,13 @@ const Products = () => {
           <input type="text" className="products__searchbar" placeholder="Search..." />
           <p className="products__sidebar-heading">Category</p>
           <ul className="products__sidebar-list">
-            <li className="products__sidebar-item">
+            <li onClick={(e) => handleClick(e)} className="products__sidebar-item">
               <a href="#">All</a>
             </li>
-            <li className="products__sidebar-item">
+            <li onClick={(e) => handleClick(e)} className="products__sidebar-item">
               <a href="#">Modern</a>
             </li>
-            <li className="products__sidebar-item">
+            <li onClick={(e) => handleClick(e)} className="products__sidebar-item">
               <a href="#">Historical</a>
             </li>
             <li className="products__sidebar-item">
