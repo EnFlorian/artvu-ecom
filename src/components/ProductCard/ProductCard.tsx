@@ -1,7 +1,7 @@
-import { ProductType } from "../../types/product";
+import { IProduct } from "../../types/product";
 import "./ProductCard.scss";
 
-const ProductCard = ({ name, price, image }: ProductType) => {
+const ProductCard = ({ name, price, image }: IProduct) => {
   return (
     <div className="product-card">
       <img className="product-card__image" src={image} alt="" />

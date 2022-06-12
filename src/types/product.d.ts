@@ -1,34 +1,47 @@
-import { FETCH_PRODUCT, FETCH_PRODUCTS } from "../state/actions";
+import {
+  FETCH_PRODUCTS_BEGIN,
+  FETCH_PRODUCTS_ERROR,
+  FETCH_PRODUCTS_SUCCESS,
+  FETCH_PRODUCT_BEGIN,
+  FETCH_PRODUCT_ERROR,
+  FETCH_PRODUCT_SUCCESS,
+  OPEN_SIDEBAR,
+} from "../state/actions";
 
 export interface IProduct {
   id: number;
   name: string;
   creator: string;
   description: string;
+  image: string;
+  category: string;
   price: number;
   stock: number;
   additionalImages: string[];
+  onlineOrdering: boolean;
 }
 
 export interface IProductState {
   products: IProduct[];
+  product: IProduct | null;
+  loading: boolean;
+  error: string;
+  isSidebarOpen: boolean;
+  featuredProducts: IProduct[];
 }
 
-export interface IProductContext {
-  products: IProduct[];
+export interface IProductContext extends IProductState {
+  openSidebar: () => void;
+  closeSidebar: () => void;
+  fetchProduct: (id: number) => void;
 }
 
 export type ProductActionType =
-  | { type: typeof FETCH_PRODUCT; payload: IProduct }
-  | { type: typeof FETCH_PRODUCTS; payload: IProduct[] };
-
-type ProductType = {
-  id: number;
-  name: string;
-  creator: string;
-  description: string;
-  price: number;
-  image: string;
-  category: string;
-  onlineOrdering: boolean;
-};
+  | { type: typeof FETCH_PRODUCTS_SUCCESS; payload: IProduct[] }
+  | { type: typeof FETCH_PRODUCTS_ERROR; payload: string }
+  | { type: typeof FETCH_PRODUCT_SUCCESS; payload: IProduct }
+  | { type: typeof FETCH_PRODUCT_ERROR; payload: string }
+  | { type: typeof OPEN_SIDEBAR; payload: boolean }
+  | { type: typeof CLOSE_SIDEBAR; payload: boolean }
+  | { type: typeof FETCH_PRODUCTS_BEGIN; payload }
+  | { type: typeof FETCH_PRODUCT_BEGIN; payload };

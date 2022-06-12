@@ -1,0 +1,15 @@
+.product {
+  min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__left-content {
+    position: relative;
+    display: flex;
+    flex: 1;
+  }
+}
