@@ -1,0 +1,42 @@
+.products-list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__image {
+    flex: 1;
+    width: 100%;
+    height: 14rem;
+    object-fit: cover;
+    background-size: cover;
+    margin-bottom: 0.5rem;
+    border-radius: 0.3rem;
+    margin-right: 1.5rem;
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--clr-dark);
+  }
+
+  &__price {
+    font-size: 1.2rem;
+
+    color: var(--clr-light);
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: 1.1rem;
+    color: var(--clr-text-dark);
+  }
+}

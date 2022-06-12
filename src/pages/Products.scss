@@ -1,3 +1,148 @@
 .products {
   min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+  max-width: 1200px;
+
+  &__wrapper {
+    margin: 3rem 0;
+    display: flex;
+  }
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    top: var(--navbar-height);
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100%;
+    padding: 0 1rem 1rem 1rem;
+    margin-right: 2rem;
+    // background-color: var(--clr-accent-light);
+    border-radius: 0.5rem;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  &__searchbar {
+    background-color: var(--clr-accent-light);
+    margin-bottom: 1rem;
+    padding: 0.2rem;
+    height: 2rem;
+    width: 12rem;
+    border: none;
+  }
+
+  &__sidebar-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  &__sidebar-list {
+    margin-bottom: 1rem;
+  }
+
+  &__sidebar-item {
+    font-size: 1rem;
+    color: var(--clr-text-dark);
+    margin-bottom: 0.2rem;
+    cursor: pointer;
+  }
+
+  &__price-slider {
+    margin-bottom: 1rem;
+  }
+
+  &__checkbox {
+    margin-right: 0.5rem;
+  }
+
+  &__availability {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &__sidebar-button {
+    background-color: var(--clr-danger-dark);
+    color: var(--clr-neutral);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 8rem;
+    transition: var(--transition);
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__results {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__divider {
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1px;
+    width: 10rem;
+    background-color: var(--clr-dark);
+  }
+
+  &__sort {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__sort-heading {
+    margin-right: 1rem;
+  }
+
+  &__sort-select {
+    font-size: 1rem;
+    width: 8rem;
+    height: 1.5rem;
+    border: none;
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--clr-accent-dark);
+      transform: scale(1.1);
+    }
+  }
+
+  &__selected {
+    color: var(--clr-accent-dark);
+  }
 }
