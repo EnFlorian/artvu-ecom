@@ -24,8 +24,8 @@ function App() {
           <Route path="/auth" element={<Auth />} />
           <Route path="/product" element={<Product />} />
         </Routes>
-        <Footer />
         <AuthModal />
+        <Footer />
       </Router>
     </div>
   );
