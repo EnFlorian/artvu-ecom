@@ -1,6 +1,7 @@
 import "./FeaturedSection.scss";
-import ProductCard from "../ProductCard";
+
 import { useProductsContext } from "../../state/contexts/productContext";
+import ProductCard from "../ProductCard/ProductCard";
 
 const FeaturedSection = () => {
   const { featuredProducts } = useProductsContext();

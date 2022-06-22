@@ -1,6 +1,5 @@
 import "./CartItem.scss";
 import { FaTrash } from "react-icons/fa";
-import { useCartContext } from "../../state/contexts/cartContext";
 const CartItem = ({ id, name, price, image, amount }: any) => {
   return (
     <div>

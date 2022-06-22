@@ -1,7 +1,7 @@
 import { createContext, useContext, useReducer } from "react";
 import { ICartContext, ICartState } from "../../types/cart";
 import { IProps } from "../../types/global";
-import { ADD_TO_CART, REMOVE_FROM_CART, ITEM_QUANTITY, CART_AMOUNT, CLEAR_CART } from "../actions";
+import { ADD_TO_CART, REMOVE_FROM_CART, ITEM_QUANTITY, CART_AMOUNT, CLEAR_CART } from "../actions/actions";
 
 import reducer from "../reducers/cartReducer";
 

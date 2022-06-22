@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Product.scss";
-import image from "../assets/images/products/3.jpg";
+import image from "../../assets/images/products/3.jpg";
 import { IoIosArrowBack } from "react-icons/io";
 
 const Product = () => {

@@ -9,7 +9,7 @@ import {
   FETCH_PRODUCTS_BEGIN,
   FETCH_PRODUCTS_ERROR,
   FETCH_PRODUCTS_SUCCESS,
-} from "../actions";
+} from "../actions/actions";
 
 import reducer from "../reducers/productReducer";
 

@@ -1,5 +1,5 @@
 import "./About.scss";
-import teamImg from "../assets/images/team.jpg";
+import teamImg from "../../assets/images/team.jpg";
 const About = () => {
   return (
     <div className="about">

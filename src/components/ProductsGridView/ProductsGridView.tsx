@@ -1,6 +1,6 @@
 import { useProductsContext } from "../../state/contexts/productContext";
 import { IProduct } from "../../types/product";
-import ProductCard from "../ProductCard";
+import ProductCard from "../ProductCard/ProductCard";
 import "./ProductsGridView.scss";
 
 const ProductsGridView = () => {

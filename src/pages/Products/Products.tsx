@@ -1,9 +1,8 @@
 import "./Products.scss";
 import { FaThList } from "react-icons/fa";
 import { IoGridSharp } from "react-icons/io5";
-import ProductsGridView from "../components/ProductsGridView";
 import React, { useState } from "react";
-import ProductsListView from "../components/ProductsListView";
+import { ProductsGridView, ProductsListView } from "../../components";
 
 const Products = () => {
   const [isGridView, setIsGridView] = useState(true);
