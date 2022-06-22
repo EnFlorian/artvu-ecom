@@ -26,12 +26,17 @@ const Auth = () => {
 
           {isLogin ? (
             <p className="auth__alt">
-              <span className="auth__alt-link">Register</span> instead
+              <button className="auth__alt-link" onClick={() => setIsLogin(false)}>
+                Register
+              </button>{" "}
+              instead
             </p>
           ) : (
             <p className="auth__alt">
-              {" "}
-              <span className="auth__alt-link">Login</span> instead
+              <button className="auth__alt-link" onClick={() => setIsLogin(true)}>
+                Login
+              </button>
+              instead
             </p>
           )}
         </div>

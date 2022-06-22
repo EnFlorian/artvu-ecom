@@ -1,13 +1,11 @@
 import { IProductState, ProductActionType } from "../../types/product";
 import {
-  OPEN_SIDEBAR,
   FETCH_PRODUCT_BEGIN,
   FETCH_PRODUCT_ERROR,
   FETCH_PRODUCT_SUCCESS,
   FETCH_PRODUCTS_BEGIN,
   FETCH_PRODUCTS_ERROR,
   FETCH_PRODUCTS_SUCCESS,
-  CLOSE_SIDEBAR,
 } from "../actions";
 
 const reducer = (state: IProductState, action: ProductActionType) => {
@@ -48,16 +46,6 @@ const reducer = (state: IProductState, action: ProductActionType) => {
         ...state,
         loading: false,
         error: action.payload,
-      };
-    case OPEN_SIDEBAR:
-      return {
-        ...state,
-        isSidebarOpen: action.payload,
-      };
-    case CLOSE_SIDEBAR:
-      return {
-        ...state,
-        isSidebarOpen: action.payload,
       };
     default:
       return {

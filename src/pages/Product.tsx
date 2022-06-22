@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import "./Product.scss";
 import image from "../assets/images/products/3.jpg";
+import { IoIosArrowBack } from "react-icons/io";
 
 const Product = () => {
   return (
     <article className="product">
       <div className="product__wrapper container">
         <Link className="product__back-link" to="/products">
-          Back to products
+          <IoIosArrowBack /> Back to products
         </Link>
         <div className="product__content">
           <section className="product__left-content">

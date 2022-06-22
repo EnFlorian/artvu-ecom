@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useProductsContext } from "../../state/contexts/productContext";
 import { IProduct } from "../../types/product";
 import "./ProductsListView.scss";
@@ -15,6 +16,9 @@ const ProductsListView = () => {
               <h3 className="products-list__name">{product.name}</h3>
               <p className="products-list__price">{product.price}</p>
               <p className="products-list__description">{product.description}</p>
+              <Link to={`/products/${product.id}`} className="products-list__button">
+                More
+              </Link>
             </div>
           </li>
         ))}

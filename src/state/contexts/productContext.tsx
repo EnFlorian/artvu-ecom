@@ -3,14 +3,12 @@ import { IProps } from "../../types/global";
 import { IProductContext, IProductState } from "../../types/product";
 import { products } from "../../data";
 import {
-  OPEN_SIDEBAR,
   FETCH_PRODUCT_BEGIN,
   FETCH_PRODUCT_ERROR,
   FETCH_PRODUCT_SUCCESS,
   FETCH_PRODUCTS_BEGIN,
   FETCH_PRODUCTS_ERROR,
   FETCH_PRODUCTS_SUCCESS,
-  CLOSE_SIDEBAR,
 } from "../actions";
 
 import reducer from "../reducers/productReducer";
@@ -35,14 +33,6 @@ export const ProductsProvider = ({ children }: IProps) => {
     fetchProducts();
   }, []);
 
-  const closeSidebar = () => {
-    dispatch({ type: CLOSE_SIDEBAR, payload: false });
-  };
-
-  const openSidebar = () => {
-    dispatch({ type: OPEN_SIDEBAR, payload: true });
-  };
-
   // In case we add an external api
   const fetchProducts = () => {
     dispatch({ type: FETCH_PRODUCTS_BEGIN, payload: true });
@@ -66,8 +56,7 @@ export const ProductsProvider = ({ children }: IProps) => {
     <ProductsContext.Provider
       value={{
         ...state,
-        openSidebar,
-        closeSidebar,
+
         fetchProduct,
       }}
     >
