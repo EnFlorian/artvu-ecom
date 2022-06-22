@@ -34,4 +34,19 @@
     margin-left: 0.2rem;
     font-size: 1.2rem;
   }
+
+  &__btn{
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1.2rem;
+    color: var(--clr-text-light);
+    transition: var(--transition);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--clr-accent-dark);
+    }
+
+  }
 }

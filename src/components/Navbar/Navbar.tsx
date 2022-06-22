@@ -1,8 +1,10 @@
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import { useUiContext } from "../../state/contexts/UiContext";
 
 const Navbar = () => {
+  const { openModal } = useUiContext();
   return (
     <nav className="navbar">
       <div className="navbar__wrapper container">
@@ -22,7 +24,9 @@ const Navbar = () => {
         </ul>
         <ul className="navbar__navlinks">
           <li className="navbar__navlink">
-            <Link to="/auth">Login</Link>
+            <button className="navbar__btn" onClick={openModal}>
+              Login
+            </button>
           </li>
           <li className="navbar__navlink">
             <Link to="/cart">Cart</Link>
