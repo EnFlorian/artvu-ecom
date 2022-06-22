@@ -2,15 +2,12 @@ import React from "react";
 import { OPEN_MODAL, CLOSE_MODAL, CLOSE_SIDEBAR, OPEN_SIDEBAR } from "../state/actions/UiActions";
 
 export interface IUiState {
-  isSidebarOpen: boolean;
   isModalOpen: boolean;
 }
 
 export interface IUiContext extends IUiState {
-  openSidebar: () => void;
-  closeSidebar: () => void;
   openModal: () => void;
-  closeModal: (e: any) => void;
+  closeModal: () => void;
 }
 
 export type UiActionType =

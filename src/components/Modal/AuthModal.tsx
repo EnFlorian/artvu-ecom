@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./AuthModal.scss";
 import Modal from "react-modal";
 import { IoClose } from "react-icons/io5";
+import { useUiContext } from "../../state/contexts/UiContext";
 
 const customStyles = {
   content: {
@@ -19,15 +20,7 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 const AuthModal = () => {
-  const [modalIsOpen, setIsOpen] = useState(true);
-
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
+  const { isModalOpen, closeModal } = useUiContext();
 
   const [isLogin, setIsLogin] = useState(false);
   const [name, setName] = useState("");
@@ -35,8 +28,15 @@ const AuthModal = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  const handleSubmit = () => {
+    closeModal();
+    //send to server
+    if (isLogin) console.log("Login", email, password);
+    else console.log(name, email, password);
+  };
+
   return (
-    <Modal isOpen={modalIsOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Authentication Modal">
+    <Modal isOpen={isModalOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Authentication Modal">
       <section className="modal">
         <div className="container modal__wrapper">
           <div className="modal__form-container">
@@ -45,18 +45,37 @@ const AuthModal = () => {
             {isLogin ? <h1 className="modal__title">Login</h1> : <h1 className="modal__title">Register</h1>}
             <form className="modal__form">
               {!isLogin && (
-                <input aria-label="Name" className="modal__input" type="text" placeholder="Please enter your name" />
+                <input
+                  value={name}
+                  aria-label="Name"
+                  className="modal__input"
+                  type="text"
+                  placeholder="Please enter your name"
+                  onChange={(e) => setName(e.target.value)}
+                />
               )}
-
-              <input aria-label="Email" className="modal__input" type="email" placeholder="Please enter your email" />
               <input
+                value={email}
+                aria-label="Email"
+                className="modal__input"
+                type="email"
+                placeholder="Please enter your email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <input
+                value={password}
                 aria-label="Password"
                 className="modal__input"
                 type="password"
                 placeholder="Please enter a password"
+                onChange={(e) => setPassword(e.target.value)}
               />
+
               {error && <h2 className="modal__error">{error}</h2>}
-              <button className="modal__btn">{isLogin ? "Login" : "Register"}</button>
+
+              <button className="modal__btn" onClick={handleSubmit}>
+                {isLogin ? "Login" : "Register"}
+              </button>
             </form>
 
             {isLogin ? (
