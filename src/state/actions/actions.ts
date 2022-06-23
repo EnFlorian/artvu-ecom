@@ -12,11 +12,6 @@ export const ITEM_QUANTITY = "CHANGE_CART_ITEM_QUANTITY";
 export const CART_AMOUNT = "CART_AMOUNT";
 export const CLEAR_CART = "CLEAR_CART";
 
-export const ADD_FILTER = "ADD_FILTER";
-export const REMOVE_FILTER = "REMOVE_FILTER";
 export const CLEAR_FILTERS = "CLEAR_FILTERS";
-
-export const ADD_SORT = "ADD_SORT";
-
-export const APPLY_FILTERS = "APPLY_FILTERS";
+export const APPLY_FILTER = "APPLY_FILTERS";
 export const APPLY_SORT = "APPLY_SORT";

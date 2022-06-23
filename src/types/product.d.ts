@@ -29,7 +29,7 @@ export interface IProductState {
   isSidebarOpen: boolean;
   featuredProducts: IProduct[];
   filteredProducts: IProduct[];
-  filters: string[];
+  filter: string;
   sort: string;
   maxPrice: number;
 }
@@ -37,10 +37,9 @@ export interface IProductState {
 export interface IProductContext extends IProductState {
   fetchProduct: (id: number) => void;
   filterProducts: (filters: string[], sort: string) => void;
-  addSort: (sort: string) => void;
-  addFilter: (filter: string) => void;
-  removeFilter: (filter: string) => void;
   clearFilters: () => void;
+  applyFilter: (filter: string) => void;
+  applySort: (sort: string) => void;
 }
 
 export type ProductActionType =

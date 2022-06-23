@@ -6,7 +6,7 @@ import { ProductsGridView, ProductsListView } from "../../components";
 import { useProductsContext } from "../../state/contexts/productContext";
 
 const Products = () => {
-  const { products, filteredProducts, filters, sort } = useProductsContext();
+  const { products, filteredProducts, applyFilter, applySort, clearFilters } = useProductsContext();
   const [isGridView, setIsGridView] = useState(true);
   let activeElement: Element | null = null;
 
@@ -22,7 +22,7 @@ const Products = () => {
   const uniqueCategories = [...new Set(products?.map((product) => product.category))];
   const categoriesItems = uniqueCategories.map((category) => {
     return (
-      <li key={category} className="products__sidebar-item">
+      <li key={category} className="products__sidebar-item" onClick={(e) => handleClick(e)}>
         <p>{category}</p>
       </li>
     );
