@@ -3,12 +3,8 @@ import { IProps } from "../../types/global";
 import { IProductContext, IProductState } from "../../types/product";
 import { products } from "../../data";
 import {
-  FETCH_PRODUCT_BEGIN,
-  FETCH_PRODUCT_ERROR,
-  FETCH_PRODUCT_SUCCESS,
-  FETCH_PRODUCTS_BEGIN,
-  FETCH_PRODUCTS_ERROR,
-  FETCH_PRODUCTS_SUCCESS,
+  FETCH_PRODUCT,
+  FETCH_PRODUCTS,
   APPLY_FILTER,
   CLEAR_FILTERS,
   APPLY_SORT,
@@ -45,21 +41,12 @@ export const ProductsProvider = ({ children }: IProps) => {
 
   // In case we add an external api
   const fetchProducts = () => {
-    dispatch({ type: FETCH_PRODUCTS_BEGIN, payload: true });
-    if (products.length > 0) {
-      dispatch({ type: FETCH_PRODUCTS_SUCCESS, payload: products });
-    } else {
-      dispatch({ type: FETCH_PRODUCTS_ERROR, payload: "Error Fetching Products" });
-    }
+    dispatch({ type: FETCH_PRODUCTS, payload: products });
   };
 
   const fetchProduct = (id: number) => {
-    dispatch({ type: FETCH_PRODUCT_BEGIN, payload: true });
     const product = products.find((product) => product.id === id);
-    if (product) {
-      dispatch({ type: FETCH_PRODUCT_SUCCESS, payload: product });
-    }
-    dispatch({ type: FETCH_PRODUCT_ERROR, payload: "Product not found" });
+    dispatch({ type: FETCH_PRODUCT, payload: product });
   };
 
   const clearFilters = () => {

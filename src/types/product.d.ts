@@ -1,13 +1,3 @@
-import {
-  FETCH_PRODUCTS_BEGIN,
-  FETCH_PRODUCTS_ERROR,
-  FETCH_PRODUCTS_SUCCESS,
-  FETCH_PRODUCT_BEGIN,
-  FETCH_PRODUCT_ERROR,
-  FETCH_PRODUCT_SUCCESS,
-  OPEN_SIDEBAR,
-} from "../state/actions";
-
 export interface IProduct {
   id: number;
   name: string;
@@ -39,12 +29,4 @@ export interface IProductContext extends IProductState {
   applyMaxPrice: (maxPrice: number) => void;
 }
 
-export type ProductActionType =
-  | { type: typeof FETCH_PRODUCTS_SUCCESS; payload: IProduct[] }
-  | { type: typeof FETCH_PRODUCTS_ERROR; payload: string }
-  | { type: typeof FETCH_PRODUCT_SUCCESS; payload: IProduct }
-  | { type: typeof FETCH_PRODUCT_ERROR; payload: string }
-  | { type: typeof OPEN_SIDEBAR; payload: boolean }
-  | { type: typeof CLOSE_SIDEBAR; payload: boolean }
-  | { type: typeof FETCH_PRODUCTS_BEGIN; payload }
-  | { type: typeof FETCH_PRODUCT_BEGIN; payload };
+export type ProductActionType = { type: string; payload: any };
