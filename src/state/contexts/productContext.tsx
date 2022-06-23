@@ -12,6 +12,7 @@ import {
   APPLY_FILTER,
   CLEAR_FILTERS,
   APPLY_SORT,
+  APPLY_MAX_PRICE,
 } from "../actions/actions";
 
 import reducer from "../reducers/productReducer";
@@ -24,13 +25,15 @@ const initialState: IProductState = {
   isSidebarOpen: false,
   featuredProducts: [],
   filteredProducts: [],
-  filter: "",
-  sort: "",
-  maxPrice: 0,
 };
 
-const ProductsContext = createContext<Partial<IProductContext>>({
+const ProductsContext = createContext<IProductContext>({
   ...initialState,
+  fetchProduct: () => {},
+  applyFilter: () => {},
+  clearFilters: () => {},
+  applySort: () => {},
+  applyMaxPrice: () => {},
 });
 
 export const ProductsProvider = ({ children }: IProps) => {
@@ -50,18 +53,6 @@ export const ProductsProvider = ({ children }: IProps) => {
     }
   };
 
-  const clearFilters = () => {
-    dispatch({ type: CLEAR_FILTERS, payload: "" });
-  };
-
-  const applyFilter = (filters: string) => {
-    dispatch({ type: APPLY_FILTER, payload: filters });
-  };
-
-  const applySort = (sort: string) => {
-    dispatch({ type: APPLY_SORT, payload: sort });
-  };
-
   const fetchProduct = (id: number) => {
     dispatch({ type: FETCH_PRODUCT_BEGIN, payload: true });
     const product = products.find((product) => product.id === id);
@@ -69,6 +60,22 @@ export const ProductsProvider = ({ children }: IProps) => {
       dispatch({ type: FETCH_PRODUCT_SUCCESS, payload: product });
     }
     dispatch({ type: FETCH_PRODUCT_ERROR, payload: "Product not found" });
+  };
+
+  const clearFilters = () => {
+    dispatch({ type: CLEAR_FILTERS, payload: "" });
+  };
+
+  const applyFilter = (filter: string) => {
+    dispatch({ type: APPLY_FILTER, payload: filter });
+  };
+
+  const applySort = (sort: string) => {
+    dispatch({ type: APPLY_SORT, payload: sort });
+  };
+
+  const applyMaxPrice = (maxPrice: number) => {
+    dispatch({ type: APPLY_MAX_PRICE, payload: maxPrice });
   };
 
   return (
@@ -79,6 +86,7 @@ export const ProductsProvider = ({ children }: IProps) => {
         applyFilter,
         applySort,
         clearFilters,
+        applyMaxPrice,
       }}
     >
       {children}

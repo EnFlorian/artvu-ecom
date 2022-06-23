@@ -15,3 +15,4 @@ export const CLEAR_CART = "CLEAR_CART";
 export const CLEAR_FILTERS = "CLEAR_FILTERS";
 export const APPLY_FILTER = "APPLY_FILTERS";
 export const APPLY_SORT = "APPLY_SORT";
+export const APPLY_MAX_PRICE = "APPLY_MAX_PRICE";

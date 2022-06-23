@@ -9,6 +9,7 @@ import {
   CLEAR_FILTERS,
   APPLY_FILTER,
   APPLY_SORT,
+  APPLY_MAX_PRICE,
 } from "../actions/actions";
 
 const reducer = (state: IProductState, action: ProductActionType) => {
@@ -54,7 +55,7 @@ const reducer = (state: IProductState, action: ProductActionType) => {
     case CLEAR_FILTERS:
       return {
         ...state,
-        filters: [],
+        filteredProducts: state.products,
       };
     case APPLY_FILTER:
       return {
@@ -109,6 +110,14 @@ const reducer = (state: IProductState, action: ProductActionType) => {
       }
       return state;
     }
+    case APPLY_MAX_PRICE:
+      return {
+        ...state,
+        filteredProducts: state.filteredProducts.filter((product) => {
+          return product.price <= action.payload;
+        }),
+      };
+
     default:
       return state;
   }

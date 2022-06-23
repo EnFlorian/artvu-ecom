@@ -4,12 +4,12 @@ import { IProduct } from "../../types/product";
 import "./ProductsListView.scss";
 
 const ProductsListView = () => {
-  const { products } = useProductsContext();
+  const { filteredProducts } = useProductsContext();
 
   return (
     <section className="products-list__container">
       <ul className="products-list__items">
-        {products?.map((product: IProduct) => (
+        {filteredProducts?.map((product: IProduct) => (
           <li key={product.id} className="products-list__item">
             <img src={product.image} alt={product.category} className="products-list__image" />
             <div className="products-list__info">

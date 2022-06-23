@@ -18,7 +18,7 @@ export interface IProduct {
   price: number;
   stock: number;
   additionalImages: string[];
-  shippingCost: number;
+  onlineOrdering: boolean;
 }
 
 export interface IProductState {
@@ -29,17 +29,14 @@ export interface IProductState {
   isSidebarOpen: boolean;
   featuredProducts: IProduct[];
   filteredProducts: IProduct[];
-  filter: string;
-  sort: string;
-  maxPrice: number;
 }
 
 export interface IProductContext extends IProductState {
   fetchProduct: (id: number) => void;
-  filterProducts: (filters: string[], sort: string) => void;
   clearFilters: () => void;
   applyFilter: (filter: string) => void;
   applySort: (sort: string) => void;
+  applyMaxPrice: (maxPrice: number) => void;
 }
 
 export type ProductActionType =
