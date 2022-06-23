@@ -1,9 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./Product.scss";
 import image from "../../assets/images/products/3.jpg";
 import { IoIosArrowBack } from "react-icons/io";
+import { useProductsContext } from "../../state/contexts/productContext";
 
 const Product = () => {
+  const { products } = useProductsContext();
+  const { id } = useParams();
+  let product;
+
+  if (id) product = products?.find((product) => product.id === +id);
+
+  const additionalImages = product?.additionalImages
+    ?.map((image, idx) => (
+      <li key={idx}>
+        <img className="product__image-small" src={image} alt="Product" />
+      </li>
+    ))
+    .slice(0, 5);
+
   return (
     <article className="product">
       <div className="product__wrapper container">
@@ -12,39 +27,29 @@ const Product = () => {
         </Link>
         <div className="product__content">
           <section className="product__left-content">
-            <img className="product__image" src={image} alt="" />
-            <div className="product__more-images">
-              <img className="product__image-small" src={image} alt="" />
-              <img className="product__image-small" src={image} alt="" />
-              <img className="product__image-small" src={image} alt="" />
-              <img className="product__image-small" src={image} alt="" />
-              <img className="product__image-small" src={image} alt="" />
-            </div>
+            <img className="product__image" src={product?.image} alt="" />
+            <ul className="product__more-images">{additionalImages}</ul>
           </section>
           <section className="product__right-content">
             <h1 className="product__title">Product Title</h1>
-            <p className="product__price">$100</p>
-            <p className="product__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eu nisl porta, euismod egestas
-              nisl euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nisl eu nisl porta,
-              euismod egestas nisl euismod.
-            </p>
+            <p className="product__price">${product?.price}</p>
+            <p className="product__description">{product?.description}</p>
             <div className="product__details">
               <div className="product__details-item">
                 <p className="product__details-item-title">Stock:</p>
-                <p className="product__details-item-value">10</p>
+                <p className="product__details-item-value">{product?.stock}</p>
               </div>
               <div className="product__details-item">
                 <p className="product__details-item-title">Artist:</p>
-                <p className="product__details-item-value">Maximilian Fabour</p>
+                <p className="product__details-item-value">{product?.creator}</p>
               </div>
               <div className="product__details-item">
                 <p className="product__details-item-title">Category:</p>
-                <p className="product__details-item-value">Modern Painting</p>
+                <p className="product__details-item-value">{product?.category}</p>
               </div>
               <div className="product__details-item">
                 <p className="product__details-item-title">Online Ordering:</p>
-                <p className="product__details-item-value">Available</p>
+                <p className="product__details-item-value">{product?.onlineOrdering ? "Available" : "Not Available"}</p>
               </div>
             </div>
           </section>

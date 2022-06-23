@@ -1,30 +1,15 @@
 import { IProductState, ProductActionType } from "../../types/product";
-import {
-  FETCH_PRODUCT,
-  FETCH_PRODUCTS,
-  CLEAR_FILTERS,
-  APPLY_FILTER,
-  APPLY_SORT,
-  APPLY_MAX_PRICE,
-} from "../actions/actions";
+import { FETCH_PRODUCTS, CLEAR_FILTERS, APPLY_FILTER, APPLY_SORT, APPLY_MAX_PRICE } from "../actions/actions";
 
 const reducer = (state: IProductState, action: ProductActionType) => {
   switch (action.type) {
     case FETCH_PRODUCTS:
       return {
         ...state,
-        loading: false,
         products: action.payload,
         featuredProducts: action.payload.slice(0, 3),
         filteredProducts: action.payload,
       };
-    case FETCH_PRODUCT:
-      return {
-        ...state,
-        loading: false,
-        product: action.payload,
-      };
-
     case CLEAR_FILTERS:
       return {
         ...state,

@@ -2,30 +2,18 @@ import { createContext, useContext, useEffect, useReducer } from "react";
 import { IProps } from "../../types/global";
 import { IProductContext, IProductState } from "../../types/product";
 import { products } from "../../data";
-import {
-  FETCH_PRODUCT,
-  FETCH_PRODUCTS,
-  APPLY_FILTER,
-  CLEAR_FILTERS,
-  APPLY_SORT,
-  APPLY_MAX_PRICE,
-} from "../actions/actions";
+import { FETCH_PRODUCTS, APPLY_FILTER, CLEAR_FILTERS, APPLY_SORT, APPLY_MAX_PRICE } from "../actions/actions";
 
 import reducer from "../reducers/productReducer";
 
 const initialState: IProductState = {
   products: [],
-  product: null,
-  loading: false,
-  error: "",
-  isSidebarOpen: false,
   featuredProducts: [],
   filteredProducts: [],
 };
 
 const ProductsContext = createContext<IProductContext>({
   ...initialState,
-  fetchProduct: () => {},
   applyFilter: () => {},
   clearFilters: () => {},
   applySort: () => {},
@@ -42,11 +30,6 @@ export const ProductsProvider = ({ children }: IProps) => {
   // In case we add an external api
   const fetchProducts = () => {
     dispatch({ type: FETCH_PRODUCTS, payload: products });
-  };
-
-  const fetchProduct = (id: number) => {
-    const product = products.find((product) => product.id === id);
-    dispatch({ type: FETCH_PRODUCT, payload: product });
   };
 
   const clearFilters = () => {
@@ -69,7 +52,6 @@ export const ProductsProvider = ({ children }: IProps) => {
     <ProductsContext.Provider
       value={{
         ...state,
-        fetchProduct,
         applyFilter,
         applySort,
         clearFilters,
