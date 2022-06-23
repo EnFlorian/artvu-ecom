@@ -5,7 +5,7 @@ import { CLOSE_MODAL, OPEN_MODAL } from "../actions/UiActions";
 import reducer from "../reducers/UiReducer";
 
 const initialState: IUiState = {
-  isModalOpen: true,
+  isModalOpen: false,
 };
 
 const UiContext = createContext<IUiContext>({

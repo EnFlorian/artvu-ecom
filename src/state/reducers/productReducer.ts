@@ -62,7 +62,9 @@ const reducer = (state: IProductState, action: ProductActionType) => {
         ...state,
         filteredProducts: state.products.filter((product) => {
           return (
-            product.category === action.payload || product.name === action.payload || product.creator === action.payload
+            product.category.toLowerCase().includes(action.payload.toLowerCase()) ||
+            product.name.toLowerCase().includes(action.payload.toLowerCase()) ||
+            product.creator.toLowerCase().includes(action.payload.toLowerCase())
           );
         }),
       };
@@ -113,7 +115,7 @@ const reducer = (state: IProductState, action: ProductActionType) => {
     case APPLY_MAX_PRICE:
       return {
         ...state,
-        filteredProducts: state.filteredProducts.filter((product) => {
+        filteredProducts: state.products.filter((product) => {
           return product.price <= action.payload;
         }),
       };
