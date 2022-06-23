@@ -18,7 +18,7 @@ export interface IProduct {
   price: number;
   stock: number;
   additionalImages: string[];
-  onlineOrdering: boolean;
+  shippingCost: number;
 }
 
 export interface IProductState {
