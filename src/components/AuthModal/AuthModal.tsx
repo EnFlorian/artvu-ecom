@@ -5,6 +5,9 @@ import { IoClose } from "react-icons/io5";
 import { useUiContext } from "../../state/contexts/UiContext";
 
 const customStyles = {
+  overlay: {
+    backgroundColor: "rgba(0, 0, 0, 0.8)",
+  },
   content: {
     top: "50%",
     left: "50%",

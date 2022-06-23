@@ -20,6 +20,9 @@ const initialState: IProductState = {
   error: "",
   isSidebarOpen: false,
   featuredProducts: [],
+  filteredProducts: [],
+  filters: [],
+  sort: "",
 };
 
 const ProductsContext = createContext<Partial<IProductContext>>({

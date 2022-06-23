@@ -3,8 +3,10 @@ import { FaThList } from "react-icons/fa";
 import { IoGridSharp } from "react-icons/io5";
 import React, { useState } from "react";
 import { ProductsGridView, ProductsListView } from "../../components";
+import { useProductsContext } from "../../state/contexts/productContext";
 
 const Products = () => {
+  const { products, filteredProducts, filters, sort } = useProductsContext();
   const [isGridView, setIsGridView] = useState(true);
   let activeElement: Element | null = null;
 
@@ -23,10 +25,10 @@ const Products = () => {
           <p className="products__sidebar-heading">Category</p>
           <ul className="products__sidebar-list">
             <li onClick={(e) => handleClick(e)} className="products__sidebar-item">
-              <a href="#">All</a>
+              <p className="products__sidebar-list-item">All</p>
             </li>
             <li onClick={(e) => handleClick(e)} className="products__sidebar-item">
-              <a href="#">Modern</a>
+              <p>Modern</p>
             </li>
             <li onClick={(e) => handleClick(e)} className="products__sidebar-item">
               <a href="#">Historical</a>

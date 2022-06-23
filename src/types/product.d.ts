@@ -28,12 +28,16 @@ export interface IProductState {
   error: string;
   isSidebarOpen: boolean;
   featuredProducts: IProduct[];
+  filteredProducts: IProduct[];
+  filters: string[];
+  sort: string;
 }
 
 export interface IProductContext extends IProductState {
   openSidebar: () => void;
   closeSidebar: () => void;
   fetchProduct: (id: number) => void;
+  filterProducts: (filters: string[], sort: string) => void;
 }
 
 export type ProductActionType =
