@@ -2,8 +2,10 @@ import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { useUiContext } from "../../state/contexts/UiContext";
+import { useCartContext } from "../../state/contexts/cartContext";
 
 const Navbar = () => {
+  const { itemAmount } = useCartContext();
   const { openModal } = useUiContext();
   return (
     <nav className="navbar">
@@ -29,7 +31,10 @@ const Navbar = () => {
             </button>
           </li>
           <li className="navbar__navlink">
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart">
+              {itemAmount}
+              Cart
+            </Link>
             <FaShoppingCart className="navbar__shopping-cart" />
           </li>
         </ul>

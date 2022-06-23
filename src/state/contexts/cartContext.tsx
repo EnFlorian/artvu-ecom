@@ -8,7 +8,7 @@ import reducer from "../reducers/cartReducer";
 
 const initialState: ICartState = {
   cart: [],
-  itemAmount: 0,
+  itemAmount: 5,
   totalPrice: 0,
   shippingCost: 0,
 };
