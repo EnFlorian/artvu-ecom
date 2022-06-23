@@ -10,6 +10,24 @@ const Products = () => {
   const [isGridView, setIsGridView] = useState(true);
   let activeElement: Element | null = null;
 
+  const uniqueArtists = [...new Set(products?.map((product) => product.creator))];
+  const artistsItems = uniqueArtists.map((artist) => {
+    return (
+      <li key={artist} className="products__sidebar-item">
+        <p>{artist}</p>
+      </li>
+    );
+  });
+
+  const uniqueCategories = [...new Set(products?.map((product) => product.category))];
+  const categoriesItems = uniqueCategories.map((category) => {
+    return (
+      <li key={category} className="products__sidebar-item">
+        <p>{category}</p>
+      </li>
+    );
+  });
+
   const handleClick = (event: React.MouseEvent) => {
     event.preventDefault();
     activeElement?.classList.remove("products__sidebar-item--active");
@@ -23,44 +41,9 @@ const Products = () => {
         <aside className="products__sidebar">
           <input type="text" className="products__searchbar" placeholder="Search..." />
           <p className="products__sidebar-heading">Category</p>
-          <ul className="products__sidebar-list">
-            <li onClick={(e) => handleClick(e)} className="products__sidebar-item">
-              <p className="products__sidebar-list-item">All</p>
-            </li>
-            <li onClick={(e) => handleClick(e)} className="products__sidebar-item">
-              <p>Modern</p>
-            </li>
-            <li onClick={(e) => handleClick(e)} className="products__sidebar-item">
-              <a href="#">Historical</a>
-            </li>
-            <li className="products__sidebar-item">
-              <a href="#">Landscape</a>
-            </li>
-            <li className="products__sidebar-item">
-              <a href="#">Abstract</a>
-            </li>
-          </ul>
+          <ul className="products__sidebar-list">{categoriesItems}</ul>
           <p className="products__sidebar-heading">Artists</p>
-          <ul className="products__sidebar-list">
-            <li className="products__sidebar-item">
-              <a href="#">All</a>
-            </li>
-            <li className="products__sidebar-item">
-              <a href="#">Maxiimilian</a>
-            </li>
-            <li className="products__sidebar-item">
-              <a href="#">Thomas</a>
-            </li>
-            <li className="products__sidebar-item">
-              <a href="#">Thomas</a>
-            </li>
-            <li className="products__sidebar-item">
-              <a href="#">Thomas</a>
-            </li>
-            <li className="products__sidebar-item">
-              <a href="#">Thomas</a>
-            </li>
-          </ul>
+          <ul className="products__sidebar-list">{artistsItems}</ul>
           <p className="products__sidebar-heading">Price</p>
           <div className="products__price-slider">
             <input type="range" min="0" max="5000" />

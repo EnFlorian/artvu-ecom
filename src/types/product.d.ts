@@ -31,13 +31,16 @@ export interface IProductState {
   filteredProducts: IProduct[];
   filters: string[];
   sort: string;
+  maxPrice: number;
 }
 
 export interface IProductContext extends IProductState {
-  openSidebar: () => void;
-  closeSidebar: () => void;
   fetchProduct: (id: number) => void;
   filterProducts: (filters: string[], sort: string) => void;
+  addSort: (sort: string) => void;
+  addFilter: (filter: string) => void;
+  removeFilter: (filter: string) => void;
+  clearFilters: () => void;
 }
 
 export type ProductActionType =

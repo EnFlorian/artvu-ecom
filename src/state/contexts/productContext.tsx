@@ -9,6 +9,9 @@ import {
   FETCH_PRODUCTS_BEGIN,
   FETCH_PRODUCTS_ERROR,
   FETCH_PRODUCTS_SUCCESS,
+  ADD_SORT,
+  ADD_FILTER,
+  REMOVE_FILTER,
 } from "../actions/actions";
 
 import reducer from "../reducers/productReducer";
@@ -21,8 +24,9 @@ const initialState: IProductState = {
   isSidebarOpen: false,
   featuredProducts: [],
   filteredProducts: [],
-  filters: [],
+  filters: ["Still Painting"],
   sort: "",
+  maxPrice: 0,
 };
 
 const ProductsContext = createContext<Partial<IProductContext>>({
@@ -36,6 +40,11 @@ export const ProductsProvider = ({ children }: IProps) => {
     fetchProducts();
   }, []);
 
+  useEffect(() => {
+    // applyFilters(state.filters);
+    // applySort(state.sort);
+  }, [state.filters]);
+
   // In case we add an external api
   const fetchProducts = () => {
     dispatch({ type: FETCH_PRODUCTS_BEGIN, payload: true });
@@ -44,6 +53,14 @@ export const ProductsProvider = ({ children }: IProps) => {
     } else {
       dispatch({ type: FETCH_PRODUCTS_ERROR, payload: "Error Fetching Products" });
     }
+  };
+
+  const applyFilters = (filters: string[]) => {
+    dispatch({ type: ADD_FILTER, payload: filters });
+  };
+
+  const applySort = (sort: string) => {
+    dispatch({ type: ADD_SORT, payload: sort });
   };
 
   const fetchProduct = (id: number) => {
@@ -55,12 +72,31 @@ export const ProductsProvider = ({ children }: IProps) => {
     dispatch({ type: FETCH_PRODUCT_ERROR, payload: "Product not found" });
   };
 
+  const addSort = (sort: string) => {
+    dispatch({ type: ADD_SORT, payload: sort });
+  };
+
+  const addFilter = (filter: string) => {
+    dispatch({ type: ADD_FILTER, payload: filter });
+  };
+
+  const removeFilter = (filter: string) => {
+    dispatch({ type: REMOVE_FILTER, payload: filter });
+  };
+
+  const clearFilters = () => {
+    dispatch({ type: REMOVE_FILTER, payload: [] });
+  };
+
   return (
     <ProductsContext.Provider
       value={{
         ...state,
-
         fetchProduct,
+        addSort,
+        addFilter,
+        removeFilter,
+        clearFilters,
       }}
     >
       {children}
