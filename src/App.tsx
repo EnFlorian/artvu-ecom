@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthModal, Footer, Navbar } from "./components";
-import { About, Home, NotFound, Product, Products } from "./pages";
+import { About, Cart, Home, NotFound, Product, Products } from "./pages";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<Product />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <AuthModal />
         <Footer />

@@ -1,7 +1,13 @@
+import { CartHeader, CartItem } from "../../components";
 import "./Cart.scss";
 
 const Cart = () => {
-  return <div>Cart</div>;
+  return (
+    <section className="cart container">
+      <CartHeader />
+      <CartItem />
+    </section>
+  );
 };
 
 export default Cart;
