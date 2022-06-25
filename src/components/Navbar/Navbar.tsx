@@ -31,11 +31,11 @@ const Navbar = () => {
             </button>
           </li>
           <li className="navbar__navlink">
-            <Link to="/cart">
-              {itemAmount}
-              Cart
-            </Link>
-            <FaShoppingCart className="navbar__shopping-cart" />
+            <Link to="/cart">Cart</Link>
+            <div className="navbar__shopping-cart-wrapper">
+              <FaShoppingCart className="navbar__shopping-cart"></FaShoppingCart>
+              <p className="navbar__shopping-cart-count">{itemAmount}</p>
+            </div>
           </li>
         </ul>
       </div>
