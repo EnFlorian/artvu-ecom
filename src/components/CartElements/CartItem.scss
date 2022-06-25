@@ -1,9 +1,11 @@
 .cart-item {
   display: grid;
-  grid-template-columns: 200px auto auto;
-  grid-template-rows: 75px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr;
   gap: 3rem 1rem;
   justify-items: center;
-  margin-bottom: 3rem;
   align-items: center;
+  border-bottom: 1px solid var(--clr-dark);
+  margin-bottom: 3rem;
+  padding: 1rem 0;
+  height: auto;
 }

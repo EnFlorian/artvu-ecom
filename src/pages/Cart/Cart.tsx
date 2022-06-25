@@ -6,6 +6,9 @@ const Cart = () => {
     <section className="cart container">
       <CartHeader />
       <CartItem />
+      <CartItem />
+      <CartItem />
+      <CartItem />
     </section>
   );
 };
