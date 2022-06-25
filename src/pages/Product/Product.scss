@@ -1,4 +1,5 @@
 .product {
+  margin: 0rem 0 3rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +36,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin: 0 5rem 3rem 0rem;
+    margin: 0rem 4rem 0rem 0rem;
     flex: 1;
   }
 
@@ -48,10 +49,10 @@
 
   &__more-images {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
-    gap: 0.3rem;
-    width: 100;
+    gap: 0.2rem;
+    width: auto;
   }
 
   &__image-small {
@@ -69,6 +70,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 
   &__title {
@@ -92,8 +94,9 @@
   &__details {
     display: flex;
     flex-direction: column;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--clr-light);
+    margin-bottom: 1.5rem;
   }
 
   &__details-item {
@@ -112,5 +115,25 @@
   &__details-item-value {
     font-size: 1.1rem;
     color: var(--clr-medium);
+  }
+
+  &__add-btn {
+    border: none;
+    color: var(--clr-neutral);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-light);
+    border-radius: 0.3rem;
+    width: 12rem;
+    height: 3rem;
+    transition: var(--transition);
+    cursor: pointer;
+    margin: 1.1rem 0rem 0.2rem 0rem;
+
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 }

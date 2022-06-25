@@ -11,6 +11,7 @@ import ProductCard from "./ProductCard/ProductCard";
 import ProductsGridView from "./ProductsGridView/ProductsGridView";
 import ProductsListView from "./ProductsListView/ProductsListView";
 import WorkSection from "./WorkSection/WorkSection";
+import QuantityButtons from "./QuantityButtons/QuantityButtons";
 
 export {
   CartItem,
@@ -26,4 +27,5 @@ export {
   ProductsGridView,
   ProductsListView,
   WorkSection,
+  QuantityButtons,
 };

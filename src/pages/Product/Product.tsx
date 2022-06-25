@@ -1,8 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import "./Product.scss";
-import image from "../../assets/images/products/3.jpg";
 import { IoIosArrowBack } from "react-icons/io";
 import { useProductsContext } from "../../state/contexts/productContext";
+import { QuantityButtons } from "../../components";
 
 const Product = () => {
   const { products } = useProductsContext();
@@ -52,6 +52,9 @@ const Product = () => {
                 <p className="product__details-item-value">{product?.onlineOrdering ? "Available" : "Not Available"}</p>
               </div>
             </div>
+            <QuantityButtons />
+
+            <button className="product__add-btn">Add to cart</button>
           </section>
         </div>
       </div>
