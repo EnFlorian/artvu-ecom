@@ -1,10 +1,6 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
-import { IProps } from "../../types/global";
-import { IProductContext, IProductState } from "../../types/product";
-import { products } from "../../data";
-import { FETCH_PRODUCTS, APPLY_FILTER, CLEAR_FILTERS, APPLY_SORT, APPLY_MAX_PRICE } from "../actions/actions";
-
 import reducer from "../reducers/productReducer";
+import { products } from "../../data";
 
 const initialState: IProductState = {
   products: [],
@@ -29,23 +25,23 @@ export const ProductsProvider = ({ children }: IProps) => {
 
   // In case we add an external api
   const fetchProducts = () => {
-    dispatch({ type: FETCH_PRODUCTS, payload: products });
+    dispatch({ type: "FETCH_PRODUCTS", payload: products });
   };
 
   const clearFilters = () => {
-    dispatch({ type: CLEAR_FILTERS, payload: "" });
+    dispatch({ type: "CLEAR_FILTERS", payload: "" });
   };
 
   const applyFilter = (filter: string) => {
-    dispatch({ type: APPLY_FILTER, payload: filter });
+    dispatch({ type: "APPLY_FILTER", payload: filter });
   };
 
   const applySort = (sort: string) => {
-    dispatch({ type: APPLY_SORT, payload: sort });
+    dispatch({ type: "APPLY_SORT", payload: sort });
   };
 
   const applyMaxPrice = (maxPrice: number) => {
-    dispatch({ type: APPLY_MAX_PRICE, payload: maxPrice });
+    dispatch({ type: "APPLY_MAX_PRICE", payload: maxPrice });
   };
 
   return (

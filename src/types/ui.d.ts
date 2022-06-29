@@ -1,17 +1,14 @@
-import React from "react";
-import { OPEN_MODAL, CLOSE_MODAL, CLOSE_SIDEBAR, OPEN_SIDEBAR } from "../state/actions/UiActions";
-
-export interface IUiState {
+interface IUiState {
   isModalOpen: boolean;
 }
 
-export interface IUiContext extends IUiState {
+interface IUiContext extends IUiState {
   openModal: () => void;
   closeModal: () => void;
 }
 
-export type UiActionType =
-  | { type: typeof OPEN_MODAL }
-  | { type: typeof CLOSE_MODAL }
-  | { type: typeof OPEN_SIDEBAR }
-  | { type: typeof CLOSE_SIDEBAR };
+type UiActionType =
+  | { type: "OPEN_MODAL" }
+  | { type: "CLOSE_MODAL" }
+  | { type: "OPEN_SIDEBAR" }
+  | { type: "CLOSE_SIDEBAR" };

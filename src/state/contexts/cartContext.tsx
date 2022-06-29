@@ -1,9 +1,4 @@
 import { createContext, useContext, useReducer } from "react";
-import { ICartContext, ICartState } from "../../types/cart";
-import { IProps } from "../../types/global";
-import { IProduct } from "../../types/product";
-import { ADD_TO_CART, REMOVE_FROM_CART, CLEAR_CART } from "../actions/actions";
-
 import reducer from "../reducers/cartReducer";
 
 const initialState: ICartState = {
@@ -24,15 +19,15 @@ export const CartProvider = ({ children }: IProps) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const addToCart = (product: IProduct) => {
-    dispatch({ type: ADD_TO_CART, payload: product });
+    dispatch({ type: "ADD_TO_CART", payload: product });
   };
 
   const clearCart = (product: IProduct) => {
-    dispatch({ type: CLEAR_CART, payload: product });
+    dispatch({ type: "CLEAR_CART", payload: product });
   };
 
   const removeFromCart = (product: IProduct) => {
-    dispatch({ type: REMOVE_FROM_CART, payload: product });
+    dispatch({ type: "REMOVE_FROM_CART", payload: product });
   };
 
   return (

@@ -1,15 +1,3 @@
-import {
-  LOAD_PRODUCTS,
-  SET_GRIDVIEW,
-  SET_LISTVIEW,
-  UPDATE_SORT,
-  SORT_PRODUCTS,
-  UPDATE_FILTERS,
-  FILTER_PRODUCTS,
-  CLEAR_FILTERS,
-} from "../state/actions/FilterActions";
-import { IProduct } from "./product";
-
 export interface IFilterState {
   filteredProducts: IProduct[];
   allProducts: IProduct[];
@@ -37,12 +25,12 @@ export interface IFilterContext extends IFilterState {
 }
 
 export type FilterActionType =
-  | { type: typeof OPEN_MODAL }
-  | { type: typeof LOAD_PRODUCTS; payload: IProduct[] }
-  | { type: typeof SET_GRIDVIEW }
-  | { type: typeof SET_LISTVIEW }
-  | { type: typeof UPDATE_SORT; payload: string }
-  | { type: typeof SORT_PRODUCTS }
-  | { type: typeof UPDATE_FILTERS; payload: { name: string; value: string } }
-  | { type: typeof FILTER_PRODUCTS }
-  | { type: typeof CLEAR_FILTERS };
+  | { type: "OPEN_MODAL" }
+  | { type: "LOAD_PRODUCTS"; payload: IProduct[] }
+  | { type: "SET_GRIDVIEW" }
+  | { type: "SET_LISTVIEW" }
+  | { type: "UPDATE_SORT"; payload: string }
+  | { type: "SORT_PRODUCTS" }
+  | { type: "UPDATE_FILTERS"; payload: { name: string; value: string } }
+  | { type: "FILTER_PRODUCTS" }
+  | { type: "CLEAR_FILTERS" };

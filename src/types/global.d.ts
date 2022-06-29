@@ -1,5 +1,3 @@
-import React from "react";
-
-export interface IProps {
+interface IProps {
   children: React.ReactNode;
 }

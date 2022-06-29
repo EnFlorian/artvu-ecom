@@ -1,4 +1,4 @@
-export interface IProduct {
+interface IProduct {
   id: number;
   name: string;
   creator: string;
@@ -10,18 +10,17 @@ export interface IProduct {
   additionalImages: string[];
   onlineOrdering: boolean;
 }
-
-export interface IProductState {
+interface IProductState {
   products: IProduct[];
   featuredProducts: IProduct[];
   filteredProducts: IProduct[];
 }
 
-export interface IProductContext extends IProductState {
+interface IProductContext extends IProductState {
   clearFilters: () => void;
   applyFilter: (filter: string) => void;
   applySort: (sort: string) => void;
   applyMaxPrice: (maxPrice: number) => void;
 }
 
-export type ProductActionType = { type: string; payload: any };
+type ProductActionType = { type: string; payload: any };

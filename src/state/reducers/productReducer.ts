@@ -1,21 +1,18 @@
-import { IProductState, ProductActionType } from "../../types/product";
-import { FETCH_PRODUCTS, CLEAR_FILTERS, APPLY_FILTER, APPLY_SORT, APPLY_MAX_PRICE } from "../actions/actions";
-
 const reducer = (state: IProductState, action: ProductActionType) => {
   switch (action.type) {
-    case FETCH_PRODUCTS:
+    case "FETCH_PRODUCTS":
       return {
         ...state,
         products: action.payload,
         featuredProducts: action.payload.slice(0, 3),
         filteredProducts: action.payload,
       };
-    case CLEAR_FILTERS:
+    case "CLEAR_FILTERS":
       return {
         ...state,
         filteredProducts: state.products,
       };
-    case APPLY_FILTER:
+    case "APPLY_FILTER":
       return {
         ...state,
         filteredProducts: state.products.filter((product) => {
@@ -26,7 +23,7 @@ const reducer = (state: IProductState, action: ProductActionType) => {
           );
         }),
       };
-    case APPLY_SORT: {
+    case "APPLY_SORT": {
       if (action.payload === "Price: Lowest") {
         return {
           ...state,
@@ -70,7 +67,7 @@ const reducer = (state: IProductState, action: ProductActionType) => {
       }
       return state;
     }
-    case APPLY_MAX_PRICE:
+    case "APPLY_MAX_PRICE":
       return {
         ...state,
         filteredProducts: state.products.filter((product) => {

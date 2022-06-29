@@ -1,4 +1,3 @@
-import { IProduct } from "../../types/product";
 import "./ProductCard.scss";
 
 const ProductCard = ({ name, price, image }: IProduct) => {

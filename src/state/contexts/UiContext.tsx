@@ -1,7 +1,4 @@
 import { createContext, useContext, useReducer } from "react";
-import { IProps } from "../../types/global";
-import { IUiContext, IUiState } from "../../types/ui";
-import { CLOSE_MODAL, OPEN_MODAL } from "../actions/UiActions";
 import reducer from "../reducers/UiReducer";
 
 const initialState: IUiState = {
@@ -18,11 +15,11 @@ export const UiProvider = ({ children }: IProps) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const openModal = () => {
-    dispatch({ type: OPEN_MODAL });
+    dispatch({ type: "OPEN_MODAL" });
   };
 
   const closeModal = () => {
-    dispatch({ type: CLOSE_MODAL });
+    dispatch({ type: "CLOSE_MODAL" });
   };
 
   return (

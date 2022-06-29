@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useProductsContext } from "../../state/contexts/productContext";
-import { IProduct } from "../../types/product";
 import "./ProductsListView.scss";
 
 const ProductsListView = () => {

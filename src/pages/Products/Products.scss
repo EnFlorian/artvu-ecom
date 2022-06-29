@@ -153,6 +153,7 @@
   }
 
   &__selected {
+    outline: none;
     color: var(--clr-accent-dark);
   }
 }

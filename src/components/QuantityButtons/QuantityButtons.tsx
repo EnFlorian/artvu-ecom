@@ -1,6 +1,5 @@
 import { FaMinus, FaPlus } from "react-icons/fa";
 import { useCartContext } from "../../state/contexts/cartContext";
-import { IProduct } from "../../types/product";
 import "./QuantityButtons.scss";
 
 const QuantityButtons = ({ product }: any) => {

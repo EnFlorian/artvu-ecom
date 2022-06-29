@@ -1,9 +1,6 @@
-import { ICartState, CartActionType } from "../../types/cart";
-import { ADD_TO_CART, REMOVE_FROM_CART, CLEAR_CART } from "../actions/actions";
-
 const reducer = (state: ICartState, action: CartActionType) => {
   switch (action.type) {
-    case ADD_TO_CART:
+    case "ADD_TO_CART":
       return {
         ...state,
         cart: [...state.cart, action.payload],
@@ -11,7 +8,7 @@ const reducer = (state: ICartState, action: CartActionType) => {
         totalPrice: state.totalPrice + action.payload.price,
       };
 
-    case REMOVE_FROM_CART:
+    case "REMOVE_FROM_CART":
       return {
         ...state,
         cart: state.cart.filter((product) => product.id !== action.payload.id),
@@ -19,7 +16,7 @@ const reducer = (state: ICartState, action: CartActionType) => {
         totalPrice: state.totalPrice - action.payload.price,
       };
 
-    case CLEAR_CART:
+    case "CLEAR_CART":
       return {
         ...state,
         cart: [],
