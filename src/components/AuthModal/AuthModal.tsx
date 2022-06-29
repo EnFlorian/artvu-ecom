@@ -7,6 +7,7 @@ import { useUiContext } from "../../state/contexts/UiContext";
 const customStyles = {
   overlay: {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
+    zIndex: "9999",
   },
   content: {
     top: "50%",

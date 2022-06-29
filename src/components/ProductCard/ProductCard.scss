@@ -1,7 +1,7 @@
 .product-card {
   display: flex;
   flex-direction: column;
-  width: 24rem;
+  width: 23rem;
   height: auto;
 
   &__image {
@@ -11,6 +11,7 @@
     background-size: cover;
     margin-bottom: 0.5rem;
     border-radius: 0.3rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
   &__info {
     padding: 0 0.1rem;
@@ -28,5 +29,17 @@
     font-size: 1.2rem;
 
     color: var(--clr-light);
+  }
+}
+
+@media screen and (max-width: 1151px) {
+  .product-card {
+    width: 16.4rem;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .product-card {
+    width: 100%;
   }
 }

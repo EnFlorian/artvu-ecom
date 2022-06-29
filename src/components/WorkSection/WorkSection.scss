@@ -1,5 +1,4 @@
 .work {
-  // background-color: var(--clr-lighter);
   padding: 4rem 0;
   width: 100%;
 
@@ -10,14 +9,39 @@
 
   &__info {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
   }
 
   &__title {
+    position: relative;
     font-size: 2.5rem;
     color: var(--clr-dark);
     margin-bottom: 1.5rem;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: -7rem;
+      top: 1.5rem;
+      display: block;
+      width: 6rem;
+      height: 4px;
+      background-color: var(--clr-text-dark);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      right: -7rem;
+      top: 1.5rem;
+      display: block;
+      width: 6rem;
+      height: 4px;
+      background-color: var(--clr-text-dark);
+    }
   }
 
   &__description {
@@ -35,24 +59,79 @@
   &__boni-item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
-    border: 3px solid var(--clr-dark);
     border-radius: 0.5rem;
-    background-color: var(--clr-light);
-    height: 20rem;
-    width: 24rem;
+    background-color: var(--clr-lighter);
+    min-height: 23rem;
+    height: auto;
+
+    max-width: 23rem;
+    padding: 2.5rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   &__boni-title {
     font-size: 1.2rem;
     color: var(--clr-dark);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   &__boni-text {
     color: var(--clr-medium);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .work {
+    &__title {
+      font-size: 2rem;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: -2.5rem;
+        top: 1.5rem;
+        display: block;
+        width: 2rem;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        right: -2.5rem;
+        top: 1.5rem;
+        display: block;
+        width: 2rem;
+      }
+    }
+    &__description {
+      margin-bottom: 3rem;
+    }
+    &__boni {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__boni-item {
+      max-width: 100%;
+      margin-bottom: 2rem;
+      min-height: auto;
+      height: auto;
+      padding: 2.5rem 2rem;
+    }
+    &__boni-title {
+      font-size: 2.5rem;
+    }
+
+    &__boni-text {
+      color: var(--clr-medium);
+      font-size: 1.3rem;
+      margin: 0;
+      padding: 0;
+    }
   }
 }

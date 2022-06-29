@@ -39,6 +39,7 @@
     width: 12rem;
     padding: 1rem 2rem;
     transition: var(--transition);
+    text-align: center;
 
     &:hover {
       background-color: var(--clr-medium);
@@ -65,5 +66,32 @@
   &__image-big {
     border-radius: 1rem 5rem 1rem 5rem;
     width: 20rem;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .hero {
+    min-height: 60vh;
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__description {
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__left-content {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__right-content {
+      display: none;
+    }
   }
 }
