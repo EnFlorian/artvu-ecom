@@ -17,7 +17,7 @@ const Cart = () => {
   }, []);
 
   const cartItems = [...new Set(items)].map((item, index) => {
-    return <CartItem key={index} quantity={item.quantity} {...item.item} />;
+    return <CartItem key={index} {...item.item} />;
   });
 
   return (
