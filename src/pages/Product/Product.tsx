@@ -10,9 +10,7 @@ const Product = () => {
   const products = useSelector((state: RootState) => state.product.products);
   const { id } = useParams();
   let product;
-  let quantity = 0;
   if (id) product = products?.find((product) => product.id === +id) as IProduct;
-  if (id) quantity = products.filter((product) => product.id === +id).length;
 
   const additionalImages = product?.additionalImages
     ?.map((image, idx) => (
@@ -55,7 +53,7 @@ const Product = () => {
                 <p className="product__details-item-value">{product?.onlineOrdering ? "Available" : "Not Available"}</p>
               </div>
             </div>
-            {product && id && <QuantityButtons quantity={quantity} product={product} />}
+            {product && id && <QuantityButtons {...product} />}
 
             <button className="product__add-btn">Add to cart</button>
           </section>
