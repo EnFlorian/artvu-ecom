@@ -39,5 +39,5 @@ export interface IFilterState {
 }
 
 export interface ICartState {
-  cart: IProduct[];
+  items: IProduct[];
 }
