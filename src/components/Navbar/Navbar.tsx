@@ -1,12 +1,12 @@
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
-import { useUiContext } from "../../state/contexts/UiContext";
-import { useCartContext } from "../../state/contexts/cartContext";
+
+import { openModal } from "../../state/UiSlice";
+import { useDispatch } from "react-redux";
 
 const Navbar = () => {
-  const { itemAmount } = useCartContext();
-  const { openModal } = useUiContext();
+  const dispatch = useDispatch();
   return (
     <nav className="navbar">
       <div className="navbar__wrapper container">
@@ -26,7 +26,7 @@ const Navbar = () => {
         </ul>
         <ul className="navbar__navlinks">
           <li className="navbar__navlink">
-            <button className="navbar__btn" onClick={openModal}>
+            <button className="navbar__btn" onClick={() => dispatch(openModal())}>
               Login
             </button>
           </li>
@@ -34,7 +34,7 @@ const Navbar = () => {
             <Link to="/cart">Cart</Link>
             <div className="navbar__shopping-cart-wrapper">
               <FaShoppingCart className="navbar__shopping-cart"></FaShoppingCart>
-              <p className="navbar__shopping-cart-count">{itemAmount}</p>
+              <p className="navbar__shopping-cart-count">itemAmount</p>
             </div>
           </li>
         </ul>

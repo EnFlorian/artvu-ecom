@@ -1,14 +1,15 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { useProductsContext } from "../../state/contexts/productContext";
+import { RootState } from "../../state/store";
 import "./ProductsListView.scss";
 
 const ProductsListView = () => {
-  const { filteredProducts } = useProductsContext();
+  const filteredProducts = useSelector((state: RootState) => state.product.filteredProducts);
 
   return (
     <section className="products-list__container">
       <ul className="products-list__items">
-        {filteredProducts?.map((product: IProduct) => (
+        {filteredProducts?.map((product) => (
           <li key={product.id} className="products-list__item">
             <img src={product.image} alt={product.category} className="products-list__image" />
             <div className="products-list__info">

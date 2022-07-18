@@ -1,3 +1,4 @@
+import { IProduct } from "../../types/state";
 import "./ProductCard.scss";
 
 const ProductCard = ({ name, price, image }: IProduct) => {

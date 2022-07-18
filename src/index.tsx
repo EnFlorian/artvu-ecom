@@ -2,19 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles/styles.scss";
 import App from "./App";
-import { ProductsProvider } from "./state/contexts/productContext";
-import { CartProvider } from "./state/contexts/cartContext";
-import { UiProvider } from "./state/contexts/UiContext";
+import { Provider } from "react-redux";
+import { store } from "./state/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <React.StrictMode>
-    <UiProvider>
-      <ProductsProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </ProductsProvider>
-    </UiProvider>
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );

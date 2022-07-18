@@ -1,11 +1,12 @@
 import { Link, useParams } from "react-router-dom";
 import "./Product.scss";
 import { IoIosArrowBack } from "react-icons/io";
-import { useProductsContext } from "../../state/contexts/productContext";
 import { QuantityButtons } from "../../components";
+import { useSelector } from "react-redux";
+import { RootState } from "../../state/store";
 
 const Product = () => {
-  const { products } = useProductsContext();
+  const products = useSelector((state: RootState) => state.product.products);
   const { id } = useParams();
   let product;
 

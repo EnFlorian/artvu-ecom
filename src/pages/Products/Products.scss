@@ -3,36 +3,38 @@
   max-width: 1200px;
 
   &__wrapper {
-    margin: 3rem 0;
-    display: flex;
-  }
-
-  &__sidebar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    position: sticky;
-    top: var(--navbar-height);
-    left: 0;
-    width: var(--sidebar-width);
-    height: 100%;
-    padding: 0 1rem 1rem 1rem;
-    margin-right: 2rem;
-    // background-color: var(--clr-accent-light);
-    border-radius: 0.5rem;
-    z-index: 1;
-    transition: all 0.3s ease-in-out;
+    align-items: center;
+    margin: 3rem 0;
   }
+
+  &__search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    max-width: 100%;
+    width: 100%
+  }
+
+
   &__searchbar {
     background-color: var(--clr-accent-light);
     border-radius: 0.2rem;
-    margin-bottom: 1rem;
     padding: 0.4rem;
     font-size: 1rem;
-    height: 2rem;
-    width: 12rem;
+    height: 2.5rem;
+    max-width: 50%;
+    width: 100%;
     border: none;
+
+    &:focus {
+      outline: none;
+    }
   }
+
+
 
   &__sidebar-heading {
     font-size: 1.1rem;

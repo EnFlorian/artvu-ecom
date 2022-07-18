@@ -1,10 +1,11 @@
 import "./FeaturedSection.scss";
-
-import { useProductsContext } from "../../state/contexts/productContext";
 import ProductCard from "../ProductCard/ProductCard";
+import { useSelector } from "react-redux";
+import { RootState } from "../../state/store";
 
 const FeaturedSection = () => {
-  const { featuredProducts } = useProductsContext();
+  const featuredProducts = useSelector((state: RootState) => state.product.featuredProducts);
+  console.log(featuredProducts);
 
   return (
     <section className="featured">

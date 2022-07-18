@@ -1,17 +1,26 @@
 import "./Products.scss";
 import { FaThList } from "react-icons/fa";
 import { IoGridSharp } from "react-icons/io5";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ProductsGridView, ProductsListView } from "../../components";
-import { useProductsContext } from "../../state/contexts/productContext";
 import { HiOutlineSearch } from "react-icons/hi";
+import { useSelector } from "react-redux";
+import { RootState } from "../../state/store";
+import { useDispatch } from "react-redux";
+import { setFilter, sortProducts } from "../../state/ProductSlice";
 
 const Products = () => {
-  const { products, filteredProducts, applyFilter, applyMaxPrice, applySort, clearFilters } = useProductsContext();
+  const { products, filter, filteredProducts } = useSelector((state: RootState) => state.product);
+
+  const dispatch = useDispatch();
   const [isGridView, setIsGridView] = useState(true);
-  const [priceRange, setPriceRange] = useState(10000);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [maxPrice, setMaxPrice] = useState(10000);
+  const [text, setText] = useState("");
   let activeElement: Element | null = null;
+
+  useEffect(() => {
+    dispatch(setFilter({ ...filter, maxPrice, text }));
+  }, [maxPrice, text]);
 
   const uniqueArtists = [...new Set(products?.map((product) => product.creator))];
   const artistsItems = uniqueArtists.map((artist) => {
@@ -40,55 +49,49 @@ const Products = () => {
 
   const handleFilter = (event: React.MouseEvent<HTMLParagraphElement>) => {
     event.preventDefault();
-    const filter: string = event?.currentTarget?.innerText;
-    applyFilter(filter);
+    const filterItem: string = event?.currentTarget?.innerText;
+    dispatch(setFilter({ ...filter, filterItem }));
   };
 
   const handleSort = (event: React.ChangeEvent<HTMLSelectElement>) => {
     event.preventDefault();
     const sort: string = event?.currentTarget?.value;
     console.log(sort);
-    applySort(sort);
+    dispatch(sortProducts(sort));
   };
 
   const handlePrice = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     const price = +event?.currentTarget?.value;
-    setPriceRange(price);
-    applyMaxPrice(price);
+    setMaxPrice(price);
+    // applyMaxPrice(price);
   };
 
   const handleSearch = () => {
-    applyFilter(searchQuery);
+    dispatch(setFilter({ text }));
+    console.log(filter);
   };
 
   return (
     <section className="products container">
       <div className="products__wrapper">
-        <aside className="products__sidebar">
+        <div className="products__search">
           <input
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.currentTarget.value)}
-            type="text"
             className="products__searchbar"
-            placeholder="Search..."
+            type="text"
+            placeholder="Search"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            onKeyPress={(e) => {
+              if (e.key === "Enter") {
+                handleSearch();
+              }
+            }}
           />
-          <button className="products__sidebar-submit-btn" onClick={handleSearch}>
+          <button onClick={handleSearch}>
             <HiOutlineSearch />
           </button>
-          <p className="products__sidebar-heading">Category</p>
-          <ul className="products__sidebar-list">{categoriesItems}</ul>
-          <p className="products__sidebar-heading">Artists</p>
-          <ul className="products__sidebar-list">{artistsItems}</ul>
-          <p className="products__sidebar-heading">Price</p>
-          <div className="products__price-slider">
-            <input value={priceRange} type="range" min="10" max="10000" onChange={(e) => handlePrice(e)} />
-          </div>
-
-          <button className="products__sidebar-button" onClick={() => clearFilters()}>
-            Clear Selection
-          </button>
-        </aside>
+        </div>
 
         <main className="products__content">
           <div className="products__header">
@@ -100,7 +103,7 @@ const Products = () => {
                 {!isGridView ? <FaThList className="products__selected" /> : <FaThList />}
               </button>
             </div>
-            <p className="products__results">{`${filteredProducts.length} Paintings Found`}</p>
+            <p className="products__results">{`${products.length} Paintings Found`}</p>
             <hr className="products__divider" />
             <div className="products__sort">
               <p className="products__sort-heading">Sort by</p>

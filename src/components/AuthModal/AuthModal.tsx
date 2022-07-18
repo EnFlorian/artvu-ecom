@@ -2,7 +2,10 @@ import { useState } from "react";
 import "./AuthModal.scss";
 import Modal from "react-modal";
 import { IoClose } from "react-icons/io5";
-import { useUiContext } from "../../state/contexts/UiContext";
+import { closeModal } from "../../state/UiSlice";
+import { useSelector } from "react-redux";
+import { RootState } from "../../state/store";
+import { useDispatch } from "react-redux";
 
 const customStyles = {
   overlay: {
@@ -24,7 +27,8 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 const AuthModal = () => {
-  const { isModalOpen, closeModal } = useUiContext();
+  const isModalOpen = useSelector((state: RootState) => state.ui.isModalOpen);
+  const dispatch = useDispatch();
 
   const [isLogin, setIsLogin] = useState(false);
   const [name, setName] = useState("");
@@ -33,18 +37,23 @@ const AuthModal = () => {
   const [error, setError] = useState("");
 
   const handleSubmit = () => {
-    closeModal();
+    dispatch(closeModal());
     //send to server
     if (isLogin) console.log("Login", email, password);
     else console.log(name, email, password);
   };
 
   return (
-    <Modal isOpen={isModalOpen} onRequestClose={closeModal} style={customStyles} contentLabel="Authentication Modal">
+    <Modal
+      isOpen={isModalOpen}
+      onRequestClose={() => dispatch(closeModal())}
+      style={customStyles}
+      contentLabel="Authentication Modal"
+    >
       <section className="modal">
         <div className="container modal__wrapper">
           <div className="modal__form-container">
-            <IoClose className="modal__close" onClick={closeModal} />
+            <IoClose className="modal__close" onClick={() => dispatch(closeModal())} />
 
             {isLogin ? <h1 className="modal__title">Login</h1> : <h1 className="modal__title">Register</h1>}
             <form className="modal__form">
