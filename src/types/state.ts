@@ -22,13 +22,6 @@ export interface IProductState {
   filter: IFilter;
 }
 
-export interface ICartState {
-  cart: IProduct[];
-  itemAmount: number;
-  totalPrice: number;
-  shippingCost: number;
-}
-
 export interface IFilter {
   text: string;
   creator: string;
@@ -43,4 +36,8 @@ export interface IFilterState {
   gridView: boolean;
   sort: string;
   filters: IFilter;
+}
+
+export interface ICartState {
+  cart: IProduct[];
 }
