@@ -1,14 +1,26 @@
 import { FaMinus, FaPlus } from "react-icons/fa";
-// import { useCartContext } from "../../state/contexts/cartContext";
+import { useDispatch } from "react-redux";
+import { addToCart, removeFromCart } from "../../state/CartSlice";
+import { IProduct } from "../../types/state";
 import "./QuantityButtons.scss";
 
-const QuantityButtons = ({ product }: any) => {
-  // const { addToCart, removeFromCart, cart } = useCartContext();
+interface IQuantityButtonsProps {
+  product: IProduct;
+  quantity: number;
+}
+
+const QuantityButtons = ({ quantity, product }: IQuantityButtonsProps) => {
+  console.log(quantity);
+  const dispatch = useDispatch();
+
   return (
     <section className="quantity-buttons">
-      {/* <FaPlus className="quantity-buttons__icon" onClick={() => addToCart(product)} />
-      <p className="quantity-buttons__value">5</p>
-      <FaMinus className="quantity-buttons__icon" onClick={() => removeFromCart(product)} /> */}
+      <FaPlus className="quantity-buttons__icon" onClick={() => dispatch(addToCart({ item: product, quantity: 1 }))} />
+      <p className="quantity-buttons__value">{quantity}</p>
+      <FaMinus
+        className="quantity-buttons__icon"
+        onClick={() => dispatch(removeFromCart({ item: product, quantity: 1 }))}
+      />
     </section>
   );
 };

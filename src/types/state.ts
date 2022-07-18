@@ -38,6 +38,11 @@ export interface IFilterState {
   filters: IFilter;
 }
 
+export interface ICartItem {
+  item: IProduct;
+  quantity: number;
+}
+
 export interface ICartState {
-  items: IProduct[];
+  items: ICartItem[];
 }

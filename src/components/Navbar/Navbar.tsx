@@ -4,8 +4,12 @@ import { FaShoppingCart } from "react-icons/fa";
 
 import { openModal } from "../../state/UiSlice";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { RootState } from "../../state/store";
 
 const Navbar = () => {
+  const items = useSelector((state: RootState) => state.cart.items);
+  const cartAmount = items.length;
   const dispatch = useDispatch();
   return (
     <nav className="navbar">
@@ -34,7 +38,7 @@ const Navbar = () => {
             <Link to="/cart">Cart</Link>
             <div className="navbar__shopping-cart-wrapper">
               <FaShoppingCart className="navbar__shopping-cart"></FaShoppingCart>
-              <p className="navbar__shopping-cart-count">itemAmount</p>
+              <p className="navbar__shopping-cart-count">{cartAmount}</p>
             </div>
           </li>
         </ul>

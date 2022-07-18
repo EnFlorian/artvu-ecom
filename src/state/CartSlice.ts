@@ -10,10 +10,23 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      state.items.push(action.payload);
+      console.log(action.payload);
+      const index = state.items.findIndex((item) => item.item.id === action.payload.item.id);
+      if (index !== -1) {
+        state.items[index].quantity += action.payload.quantity;
+      } else {
+        state.items.push(action.payload);
+      }
     },
     removeFromCart: (state, action) => {
-      state.items = state.items.filter((item) => item.id !== action.payload);
+      const index = state.items.findIndex((item) => item.item.id === action.payload.item.id);
+      if (index !== -1) {
+        if (state.items[index].quantity - action.payload.quantity === 0) {
+          state.items.splice(index, 1);
+        } else {
+          state.items[index].quantity -= action.payload.quantity;
+        }
+      }
     },
     clearCart: (state, action) => {
       state.items = [];
