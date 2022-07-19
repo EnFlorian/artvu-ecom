@@ -1,75 +1,29 @@
 import "./Products.scss";
 import { FaThList } from "react-icons/fa";
 import { IoGridSharp } from "react-icons/io5";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { ProductsGridView, ProductsListView } from "../../components";
 import { HiOutlineSearch } from "react-icons/hi";
 import { useSelector } from "react-redux";
 import { RootState } from "../../state/store";
 import { useDispatch } from "react-redux";
-import { setFilter, sortProducts } from "../../state/ProductSlice";
+import { setFilteredProducts, sortProducts } from "../../state/ProductSlice";
 
 const Products = () => {
-  const { products, filter, filteredProducts } = useSelector((state: RootState) => state.product);
+  const { products } = useSelector((state: RootState) => state.product);
 
   const dispatch = useDispatch();
   const [isGridView, setIsGridView] = useState(true);
-  const [maxPrice, setMaxPrice] = useState(10000);
-  const [text, setText] = useState("");
-  let activeElement: Element | null = null;
-
-  useEffect(() => {
-    dispatch(setFilter({ ...filter, maxPrice, text }));
-  }, [maxPrice, text]);
-
-  const uniqueArtists = [...new Set(products?.map((product) => product.creator))];
-  const artistsItems = uniqueArtists.map((artist) => {
-    return (
-      <li key={artist} className="products__sidebar-item">
-        <p onClick={(e) => handleFilter(e)}>{artist}</p>
-      </li>
-    );
-  });
-
-  const uniqueCategories = [...new Set(products?.map((product) => product.category))];
-  const categoriesItems = uniqueCategories.map((category) => {
-    return (
-      <li key={category} className="products__sidebar-item" onClick={(e) => handleClick(e)}>
-        <p onClick={(e) => handleFilter(e)}>{category}</p>
-      </li>
-    );
-  });
-
-  const handleClick = (event: React.MouseEvent) => {
-    event.preventDefault();
-    activeElement?.classList.remove("products__sidebar-item--active");
-    activeElement = event.currentTarget;
-    event.currentTarget.classList.toggle("products__sidebar-item--active");
-  };
-
-  const handleFilter = (event: React.MouseEvent<HTMLParagraphElement>) => {
-    event.preventDefault();
-    const filterItem: string = event?.currentTarget?.innerText;
-    dispatch(setFilter({ ...filter, filterItem }));
-  };
+  const [query, setQuery] = useState("country life");
 
   const handleSort = (event: React.ChangeEvent<HTMLSelectElement>) => {
     event.preventDefault();
     const sort: string = event?.currentTarget?.value;
-    console.log(sort);
     dispatch(sortProducts(sort));
   };
 
-  const handlePrice = (event: React.ChangeEvent<HTMLInputElement>) => {
-    event.preventDefault();
-    const price = +event?.currentTarget?.value;
-    setMaxPrice(price);
-    // applyMaxPrice(price);
-  };
-
   const handleSearch = () => {
-    dispatch(setFilter({ text }));
-    console.log(filter);
+    dispatch(setFilteredProducts(query));
   };
 
   return (
@@ -80,15 +34,15 @@ const Products = () => {
             className="products__searchbar"
             type="text"
             placeholder="Search"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
             onKeyPress={(e) => {
               if (e.key === "Enter") {
                 handleSearch();
               }
             }}
           />
-          <button onClick={handleSearch}>
+          <button className="products__search-button" onClick={handleSearch}>
             <HiOutlineSearch />
           </button>
         </div>

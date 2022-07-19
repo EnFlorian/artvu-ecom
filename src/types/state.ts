@@ -19,23 +19,7 @@ export interface IProductState {
   products: IProduct[];
   featuredProducts: IProduct[];
   filteredProducts: IProduct[];
-  filter: IFilter;
-}
-
-export interface IFilter {
-  text: string;
-  creator: string;
-  category: string;
-  maxPrice: number;
-  online: boolean;
-}
-
-export interface IFilterState {
-  filteredProducts: IProduct[];
-  allProducts: IProduct[];
-  gridView: boolean;
-  sort: string;
-  filters: IFilter;
+  query: string;
 }
 
 export interface ICartItem {

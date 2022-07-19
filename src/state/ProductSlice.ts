@@ -6,13 +6,7 @@ const initialState: IProductState = {
   products: products,
   featuredProducts: products.slice(0, 3),
   filteredProducts: products,
-  filter: {
-    text: "",
-    creator: "",
-    category: "",
-    maxPrice: 1000000,
-    online: false,
-  },
+  query: "",
 };
 
 export const productSlice = createSlice({
@@ -26,22 +20,12 @@ export const productSlice = createSlice({
       state.featuredProducts = action.payload;
     },
     setFilteredProducts: (state, action) => {
-      state.filteredProducts = action.payload;
-    },
-    setFilter: (state, action) => {
-      state.filter = action.payload;
-    },
-    filterProducts: (state, action) => {
-      const { text, creator, category, maxPrice, online } = action.payload;
       state.filteredProducts = state.products.filter((product) => {
-        return (
-          product.name.toLowerCase().includes(text.toLowerCase()) &&
-          product.creator.toLowerCase().includes(creator.toLowerCase()) &&
-          product.category.toLowerCase().includes(category.toLowerCase()) &&
-          product.price <= maxPrice &&
-          product.onlineOrdering === online
-        );
+        return product.name.toLowerCase().includes(action.payload.toLowerCase());
       });
+    },
+    setQuery: (state, action) => {
+      state.query = action.payload;
     },
     sortProducts: (state, action) => {
       if (action.payload === "Price: Lowest") {
@@ -75,6 +59,5 @@ export const productSlice = createSlice({
   },
 });
 
-export const { setProducts, setFeaturedProducts, setFilteredProducts, setFilter, filterProducts, sortProducts } =
-  productSlice.actions;
+export const { setProducts, setFeaturedProducts, setFilteredProducts, setQuery, sortProducts } = productSlice.actions;
 export default productSlice.reducer;

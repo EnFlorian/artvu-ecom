@@ -5,7 +5,6 @@ import "./ProductsGridView.scss";
 
 const ProductsGridView = () => {
   const filteredProducts = useSelector((state: RootState) => state.product.filteredProducts);
-  console.log(filteredProducts);
 
   return (
     <section className="products-grid__container">

@@ -38,9 +38,6 @@ const AuthModal = () => {
 
   const handleSubmit = () => {
     dispatch(closeModal());
-    //send to server
-    if (isLogin) console.log("Login", email, password);
-    else console.log(name, email, password);
   };
 
   return (
