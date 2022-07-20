@@ -8,4 +8,35 @@
   margin-bottom: 3rem;
   padding: 1rem 0;
   height: auto;
+
+  &__product {
+    margin: 0.1rem;
+  }
+
+  &__name {
+    font-size: 1.4rem;
+    color: var(--clr-text-dark);
+  }
+
+  &__price {
+    font-size: 1.4rem;
+    color: var(--clr-text-dark);
+  }
+
+  &__subtotal {
+    font-size: 1.4rem;
+    color: var(--clr-text-dark);
+  }
+
+  &__remove-btn {
+    background: transparent;
+    border: none;
+    color: var(--clr-text-dark);
+    cursor: pointer;
+  }
+
+  &__icon {
+    font-size: 1.4rem;
+    color: var(--clr-text-dark);
+  }
 }

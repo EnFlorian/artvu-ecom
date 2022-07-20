@@ -10,7 +10,6 @@ const CartHeader = () => {
         <h5 className="cart-header__item">Subtotal</h5>
         <span></span>
       </div>
-      <hr className="cart-header__divider" />
     </section>
   );
 };
