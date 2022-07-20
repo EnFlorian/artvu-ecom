@@ -1,5 +1,4 @@
 import CartItem from "./CartElements/CartItem";
-import CartQuantityButtons from "./CartElements/CartQuantityButtons";
 import CartHeader from "./CartElements/CartHeader";
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import Footer from "./Footer/Footer";
@@ -16,7 +15,6 @@ import MobileNavbar from "./MobileNavbar/MobileNavbar";
 
 export {
   CartItem,
-  CartQuantityButtons,
   CartHeader,
   FeaturedSection,
   Footer,

@@ -8,11 +8,11 @@ const HeroSection = () => {
     <article className="hero">
       <div className="container hero__wrapper">
         <section className="hero__left-content">
-          <h1 className="hero__title">Discover Your Art Work</h1>
+          <h1 className="hero__title">Discover Your Next Painting</h1>
           <p className="hero__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, iure dolorum, culpa rem alias sunt,
-            incidunt laborum id dignissimos laboriosam impedit fugiat libero inventore deleniti. Incidunt sit temporibus
-            debitis aspernatur.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, iure dolorum, culpa rem alias sunt, incidunt
+            laborum id dignissimos laboriosam impedit fugiat libero inventore deleniti. Incidunt sit temporibus debitis
+            aspernatur.
           </p>
           <Link className="hero__ca-btn" to="/products">
             Start Exploring
