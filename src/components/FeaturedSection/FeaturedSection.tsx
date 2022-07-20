@@ -5,7 +5,6 @@ import { RootState } from "../../state/store";
 
 const FeaturedSection = () => {
   const featuredProducts = useSelector((state: RootState) => state.product.featuredProducts);
-  console.log(featuredProducts);
 
   return (
     <section className="featured">
