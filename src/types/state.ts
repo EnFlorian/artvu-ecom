@@ -1,5 +1,6 @@
 export interface IUiState {
   isModalOpen: boolean;
+  isMobileNavOpen: boolean;
 }
 
 export interface IProduct {

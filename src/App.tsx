@@ -1,11 +1,15 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { AuthModal, Footer, Navbar } from "./components";
+import { AuthModal, Footer, MobileNavbar, Navbar } from "./components";
 import { About, Cart, Home, NotFound, Product, Products } from "./pages";
+import { useSelector } from "react-redux";
+import { RootState } from "./state/store";
+import { Fragment } from "react";
 
 function App() {
+  const isMobileNavOpen = useSelector((state: RootState) => state.ui.isMobileNavOpen);
   return (
-    <div id="app">
+    <Fragment>
       <Router>
         <Navbar />
         <Routes>
@@ -17,9 +21,10 @@ function App() {
           <Route path="/cart" element={<Cart />} />
         </Routes>
         <AuthModal />
+        {isMobileNavOpen && <MobileNavbar />}
         <Footer />
       </Router>
-    </div>
+    </Fragment>
   );
 }
 

@@ -3,6 +3,7 @@ import { IUiState } from "../types/state";
 
 const initialState: IUiState = {
   isModalOpen: false,
+  isMobileNavOpen: false,
 };
 
 export const uiSlice = createSlice({
@@ -15,8 +16,14 @@ export const uiSlice = createSlice({
     closeModal: (state) => {
       state.isModalOpen = false;
     },
+    openMobileNav: (state) => {
+      state.isMobileNavOpen = true;
+    },
+    closeMobileNav: (state) => {
+      state.isMobileNavOpen = false;
+    },
   },
 });
 
-export const { openModal, closeModal } = uiSlice.actions;
+export const { openModal, closeModal, closeMobileNav, openMobileNav } = uiSlice.actions;
 export default uiSlice.reducer;

@@ -12,6 +12,7 @@ import ProductsGridView from "./ProductsGridView/ProductsGridView";
 import ProductsListView from "./ProductsListView/ProductsListView";
 import WorkSection from "./WorkSection/WorkSection";
 import QuantityButtons from "./QuantityButtons/QuantityButtons";
+import MobileNavbar from "./MobileNavbar/MobileNavbar";
 
 export {
   CartItem,
@@ -28,4 +29,5 @@ export {
   ProductsListView,
   WorkSection,
   QuantityButtons,
+  MobileNavbar,
 };
