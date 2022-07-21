@@ -2,16 +2,30 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr;
   justify-items: center;
-  margin: 2rem 0 1rem 0;
+  margin: 5rem 0 1rem 0;
   padding-bottom: 0.5rem;
   border-bottom: 1.5px solid var(--clr-dark);
 
   &__item {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: var(--clr-text-dark);
   }
 
   &__divider {
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-header {
+    grid-template-columns: 1fr 1fr 0.5fr;
+
+    &__item-price {
+      display: none;
+    }
+
+    &__item-subtotal {
+      display: none;
+    }
   }
 }

@@ -3,6 +3,11 @@
   flex-direction: column;
   width: 23rem;
   height: auto;
+  transition: var(--transition);
+
+  &:hover {
+    transform: scale(1.01);
+  }
 
   &__image {
     width: 100%;

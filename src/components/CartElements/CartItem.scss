@@ -14,17 +14,18 @@
   }
 
   &__name {
-    font-size: 1.4rem;
+    margin-top: 0.3rem;
+    font-size: 1rem;
     color: var(--clr-text-dark);
   }
 
   &__price {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: var(--clr-text-dark);
   }
 
   &__subtotal {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: var(--clr-text-dark);
   }
 
@@ -38,5 +39,24 @@
   &__icon {
     font-size: 1.4rem;
     color: var(--clr-text-dark);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--clr-accent-dark);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .cart-item {
+    grid-template-columns: 1fr 1fr 0.5fr;
+
+    &__price {
+      display: none;
+    }
+
+    &__subtotal {
+      display: none;
+    }
   }
 }
