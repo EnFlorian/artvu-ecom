@@ -9,15 +9,14 @@
     margin: 3rem 0;
   }
 
-  &__search{
+  &__search {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
     max-width: 100%;
-    width: 100%
+    width: 100%;
   }
-
 
   &__searchbar {
     background-color: var(--clr-accent-light);
@@ -34,60 +33,27 @@
     }
   }
 
-
-
-  &__sidebar-heading {
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-
-  &__sidebar-list {
-    margin-bottom: 1rem;
-  }
-
-  &__sidebar-item {
-    font-size: 1rem;
-    color: var(--clr-text-dark);
-    margin-bottom: 0.2rem;
-    cursor: pointer;
-
-    &:hover {
-      color: var(--clr-accent-dark);
-    }
-
-    &--active {
-      color: var(--clr-accent-dark);
-    }
-  }
-
-  &__price-slider {
-    margin-bottom: 1rem;
-  }
-
-  &__checkbox {
-    margin-right: 0.5rem;
-  }
-
-  &__availability {
+  &__search-button {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
-  }
-
-  &__sidebar-button {
-    background-color: var(--clr-danger-dark);
-    color: var(--clr-neutral);
     border: none;
-    padding: 0.5rem;
-    border-radius: 0.3rem;
-    cursor: pointer;
+    background-color: var(--clr-accent-light);
     height: 2.5rem;
-    width: 8rem;
+    width: 2.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.2rem;
     transition: var(--transition);
 
     &:hover {
-      transform: scale(1.02);
+      color: var(--clr-accent-dark);
     }
+  }
+
+  &__search-icon {
+    font-size: 1.3rem;
+    color: var(--clr-text-dark);
   }
 
   &__content {
@@ -157,5 +123,38 @@
   &__selected {
     outline: none;
     color: var(--clr-accent-dark);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .products {
+    &__divider {
+      display: none;
+    }
+
+    &__searchbar {
+      max-width: 100%;
+      width: 100%;
+      height: 4rem;
+    }
+
+    &__search-button {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .products {
+    &__results {
+      display: none;
+    }
+
+    &__searchbar {
+      max-width: 100%;
+      width: 100%;
+      height: 4rem;
+    }
   }
 }

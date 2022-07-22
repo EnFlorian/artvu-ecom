@@ -60,3 +60,20 @@
     }
   }
 }
+
+@media screen and (max-width: 900px) {
+  .products-list {
+    &__item {
+      flex-direction: column;
+
+      height: auto;
+      margin-bottom: 2rem;
+    }
+
+    &__button {
+      width: 10rem;
+      height: 3rem;
+      font-size: 1.2rem;
+    }
+  }
+}

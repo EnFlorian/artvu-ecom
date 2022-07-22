@@ -43,7 +43,7 @@ const Products = () => {
             }}
           />
           <button className="products__search-button" onClick={handleSearch}>
-            <HiOutlineSearch />
+            <HiOutlineSearch className="products__search-icon" />
           </button>
         </div>
 
@@ -58,7 +58,7 @@ const Products = () => {
               </button>
             </div>
             <p className="products__results">{`${products.length} Paintings Found`}</p>
-            <hr className="products__divider" />
+            <div className="products__divider" />
             <div className="products__sort">
               <p className="products__sort-heading">Sort by</p>
               <select className="products__sort-select" onChange={(e) => handleSort(e)}>
