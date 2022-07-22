@@ -9,7 +9,6 @@ import { RootState } from "../../state/store";
 
 const Navbar = () => {
   const items = useSelector((state: RootState) => state.cart.items);
-  const cartAmount = items.length;
   const dispatch = useDispatch();
 
   return (
@@ -39,7 +38,7 @@ const Navbar = () => {
             <Link to="/cart">Cart</Link>
             <div className="navbar__shopping-cart-wrapper">
               <FaShoppingCart className="navbar__shopping-cart"></FaShoppingCart>
-              <p className="navbar__shopping-cart-count">{cartAmount}</p>
+              <p className="navbar__shopping-cart-count">{items.length}</p>
             </div>
           </li>
           <li className="navbar__navlink navbar__mobile-menu" onClick={() => dispatch(openMobileNav())}>

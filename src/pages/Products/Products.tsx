@@ -14,16 +14,12 @@ const Products = () => {
 
   const dispatch = useDispatch();
   const [isGridView, setIsGridView] = useState(true);
-  const [query, setQuery] = useState("country life");
+  const [query, setQuery] = useState("");
 
   const handleSort = (event: React.ChangeEvent<HTMLSelectElement>) => {
     event.preventDefault();
     const sort: string = event?.currentTarget?.value;
     dispatch(sortProducts(sort));
-  };
-
-  const handleSearch = () => {
-    dispatch(setFilteredProducts(query));
   };
 
   return (
@@ -38,11 +34,11 @@ const Products = () => {
             onChange={(e) => setQuery(e.target.value)}
             onKeyPress={(e) => {
               if (e.key === "Enter") {
-                handleSearch();
+                dispatch(setFilteredProducts(query));
               }
             }}
           />
-          <button className="products__search-button" onClick={handleSearch}>
+          <button className="products__search-button" onClick={() => dispatch(setFilteredProducts(query))}>
             <HiOutlineSearch className="products__search-icon" />
           </button>
         </div>

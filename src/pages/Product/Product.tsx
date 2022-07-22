@@ -54,7 +54,6 @@ const Product = () => {
               </div>
             </div>
             {product && id && <QuantityButtons {...product} />}
-
             <button className="product__add-btn">Add to cart</button>
           </section>
         </div>

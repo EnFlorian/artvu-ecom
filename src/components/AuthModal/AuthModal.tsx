@@ -1,6 +1,6 @@
-import { useState } from "react";
 import "./AuthModal.scss";
 import Modal from "react-modal";
+import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { closeModal } from "../../state/UiSlice";
 import { useSelector } from "react-redux";
@@ -34,11 +34,8 @@ const AuthModal = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // eslint-disable-next-line
   const [error, setError] = useState("");
-
-  const handleSubmit = () => {
-    dispatch(closeModal());
-  };
 
   return (
     <Modal
@@ -51,7 +48,6 @@ const AuthModal = () => {
         <div className="container modal__wrapper">
           <div className="modal__form-container">
             <IoClose className="modal__close" onClick={() => dispatch(closeModal())} />
-
             {isLogin ? <h1 className="modal__title">Login</h1> : <h1 className="modal__title">Register</h1>}
             <form className="modal__form">
               {!isLogin && (
@@ -83,11 +79,10 @@ const AuthModal = () => {
 
               {error && <h2 className="modal__error">{error}</h2>}
 
-              <button className="modal__btn" onClick={handleSubmit}>
+              <button className="modal__btn" onClick={() => dispatch(closeModal())}>
                 {isLogin ? "Login" : "Register"}
               </button>
             </form>
-
             {isLogin ? (
               <p className="modal__alt">
                 {" "}

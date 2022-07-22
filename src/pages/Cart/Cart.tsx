@@ -12,7 +12,7 @@ const Cart = () => {
   const items = useSelector((state: RootState) => state.cart.items);
   const dispatch = useDispatch();
 
-  // demo purposes
+  // demo purposes to fill the cart
   useEffect(() => {
     dispatch(addToCart({ item: products[0], quantity: 2 }));
     dispatch(addToCart({ item: products[1], quantity: 2 }));
@@ -26,7 +26,6 @@ const Cart = () => {
     <section className="cart container">
       <CartHeader />
       {cartItems}
-
       <div className="cart__summary-wrapper">
         <div className="cart__summary">
           <h5 className="cart__total">
