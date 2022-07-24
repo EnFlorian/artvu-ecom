@@ -53,8 +53,10 @@ const Product = () => {
                 <p className="product__details-item-value">{product?.onlineOrdering ? "Available" : "Not Available"}</p>
               </div>
             </div>
-            {product && id && <QuantityButtons {...product} />}
-            <button className="product__add-btn">Add to cart</button>
+            <div className="product__cart-container">
+              {product && id && <QuantityButtons {...product} />}
+              <button className="product__add-btn">Add to cart</button>
+            </div>
           </section>
         </div>
       </div>
