@@ -1,5 +1,5 @@
 import "./Navbar.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { openModal, openMobileNav } from "../../state/UiSlice";
@@ -15,17 +15,17 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar__wrapper container">
         <h1 className="navbar__logo">
-          <Link to="/">Artvu</Link>
+          <NavLink to="/">Artvu</NavLink>
         </h1>
         <ul className="navbar__navlinks navbar__main-links">
           <li className="navbar__navlink">
-            <Link to="/">Home</Link>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li className="navbar__navlink">
-            <Link to="/about">About</Link>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li className="navbar__navlink ">
-            <Link to="/products">Products</Link>
+            <NavLink to="/products">Products</NavLink>
           </li>
         </ul>
         <ul className="navbar__navlinks">
@@ -34,12 +34,14 @@ const Navbar = () => {
               Login
             </button>
           </li>
-          <li className="navbar__navlink">
-            <Link to="/cart">Cart</Link>
-            <div className="navbar__shopping-cart-wrapper">
-              <FaShoppingCart className="navbar__shopping-cart"></FaShoppingCart>
-              <p className="navbar__shopping-cart-count">{items.length}</p>
-            </div>
+          <li>
+            <NavLink to="/cart" className="navbar__navlink">
+              Cart
+              <div className="navbar__shopping-cart-wrapper">
+                <FaShoppingCart className="navbar__shopping-cart" />
+                <p className="navbar__shopping-cart-count">{items.length}</p>
+              </div>
+            </NavLink>
           </li>
           <li className="navbar__navlink navbar__mobile-menu" onClick={() => dispatch(openMobileNav())}>
             <GiHamburgerMenu className="navbar__mobile-menu-btn" />

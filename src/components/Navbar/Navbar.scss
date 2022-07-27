@@ -30,6 +30,11 @@
     }
   }
 
+  &__navlink > .active,
+  &__navlink.active {
+    color: var(--clr-accent-dark);
+  }
+
   &__shopping-cart-wrapper {
     display: flex;
     align-items: center;
@@ -46,6 +51,7 @@
   }
 
   &__shopping-cart-count {
+    color: inherit;
     position: absolute;
     bottom: 0.5rem;
     right: -0.5rem;
