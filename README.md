@@ -8,13 +8,17 @@
 - Fully responsive
 
 
-## 👩‍💻 Live Demo
-##### Go To something.com
+## 👩‍💻 Live Website
+### [Artvu (Vercel)](https://artvu-ecom.vercel.app/)
 
+## 🖼 Offline Demo
 
-**Logins (Demo)**  
-**Username:** User  
-**Password:** 1234
+### Desktop Preivew
+![Artvu](demo/artvu-desktop-demo.gif)
+
+### Mobile Preview
+![Artvu](demo/artvu-mobile-demo.gif)
+
 
   
 
