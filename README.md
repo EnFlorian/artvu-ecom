@@ -13,7 +13,7 @@
 
 ## 🖼 Offline Demo
 
-### Desktop Preivew
+### Desktop Preview
 ![Artvu](demo/artvu-desktop-demo.gif)
 
 ### Mobile Preview
@@ -42,13 +42,14 @@ yarn run start
 
 | Technology              | Description                            |
 |-------------------------|----------------------------------------|
-| Typescript              |   As programming language              |
-| React                   |   For the frontend.                    |
-| React Hooks             |   For the fetching of the API.         | 
-| React Context           |   For managing global state and avoiding prop drilling         | 
+| Typescript              |   Programming language              |
+| SCSS                   |   CSS preprocessor                 |
+| React                   |   Frontend library                 |
+| Redux           |   Global state management         | 
 
 
 #### Implementation
+The Website uses React and Typescript. For the global state management Redux toolkit is uses. SCSS handels the styling.
 
 
 
