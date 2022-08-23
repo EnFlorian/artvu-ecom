@@ -8,39 +8,39 @@
   }
 
   &__info {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin-bottom: 1rem;
   }
 
   &__title {
-    position: relative;
-    font-size: 2.5rem;
     color: var(--clr-dark);
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    position: relative;
 
     &::before {
-      position: absolute;
-      content: "";
-      left: -7rem;
-      top: 1.5rem;
-      display: block;
-      width: 6rem;
-      height: 4px;
       background-color: var(--clr-text-dark);
+      content: "";
+      display: block;
+      height: 4px;
+      left: -7rem;
+      position: absolute;
+      top: 1.5rem;
+      width: 6rem;
     }
 
     &::after {
-      position: absolute;
+      background-color: var(--clr-text-dark);
       content: "";
+      display: block;
+      height: 4px;
+      position: absolute;
       right: -7rem;
       top: 1.5rem;
-      display: block;
       width: 6rem;
-      height: 4px;
-      background-color: var(--clr-text-dark);
     }
   }
 
@@ -51,29 +51,28 @@
   }
 
   &__boni {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
   &__boni-item {
+    background-color: var(--clr-lighter);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    border-radius: 0.5rem;
-    background-color: var(--clr-lighter);
-    min-height: 23rem;
     height: auto;
-
+    justify-content: space-between;
     max-width: 23rem;
+    min-height: 23rem;
     padding: 2.5rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
 
   &__boni-title {
-    font-size: 1.2rem;
     color: var(--clr-dark);
+    font-size: 1.2rem;
     margin-bottom: 1rem;
   }
 
@@ -91,20 +90,20 @@
       font-size: 2rem;
 
       &::before {
-        position: absolute;
         content: "";
-        left: -2.5rem;
-        top: 1.5rem;
         display: block;
+        left: -2.5rem;
+        position: absolute;
+        top: 1.5rem;
         width: 2rem;
       }
 
       &::after {
-        position: absolute;
         content: "";
+        display: block;
+        position: absolute;
         right: -2.5rem;
         top: 1.5rem;
-        display: block;
         width: 2rem;
       }
     }
@@ -117,10 +116,10 @@
       justify-content: center;
     }
     &__boni-item {
-      max-width: 100%;
-      margin-bottom: 2rem;
-      min-height: auto;
       height: auto;
+      margin-bottom: 2rem;
+      max-width: 100%;
+      min-height: auto;
       padding: 2.5rem 2rem;
     }
     &__boni-title {

@@ -1,31 +1,31 @@
-import CartItem from "./CartElements/CartItem";
+import AuthModal from "./AuthModal/AuthModal";
 import CartHeader from "./CartElements/CartHeader";
+import CartItem from "./CartElements/CartItem";
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import Footer from "./Footer/Footer";
 import HeroSection from "./HeroSection/HeroSection";
 import Loader from "./Loader/Loader";
-import AuthModal from "./AuthModal/AuthModal";
+import MobileNavbar from "./MobileNavbar/MobileNavbar";
 import Navbar from "./Navbar/Navbar";
 import ProductCard from "./ProductCard/ProductCard";
 import ProductsGridView from "./ProductsGridView/ProductsGridView";
 import ProductsListView from "./ProductsListView/ProductsListView";
-import WorkSection from "./WorkSection/WorkSection";
 import QuantityButtons from "./QuantityButtons/QuantityButtons";
-import MobileNavbar from "./MobileNavbar/MobileNavbar";
+import WorkSection from "./WorkSection/WorkSection";
 
 export {
-  CartItem,
+  AuthModal,
   CartHeader,
+  CartItem,
   FeaturedSection,
   Footer,
   HeroSection,
   Loader,
-  AuthModal,
+  MobileNavbar,
   Navbar,
   ProductCard,
   ProductsGridView,
   ProductsListView,
-  WorkSection,
   QuantityButtons,
-  MobileNavbar,
+  WorkSection,
 };

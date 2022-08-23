@@ -1,19 +1,19 @@
 .loader {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   height: 100%;
+  justify-content: center;
   width: 100%;
 
   &__spinner {
-    width: 8rem;
-    height: 8rem;
-    margin: 0 auto;
-    margin-top: 10rem;
-    border-radius: 50%;
-    border: 10px solid var(--clr-medium);
-    border-top-color: var(--clr-accent-medium);
     animation: spinner 0.8s linear infinite;
+    border-radius: 50%;
+    border-top-color: var(--clr-accent-medium);
+    border: 10px solid var(--clr-medium);
+    height: 8rem;
+    margin-top: 10rem;
+    margin: 0 auto;
+    width: 8rem;
   }
 }
 

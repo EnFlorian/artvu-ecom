@@ -1,8 +1,8 @@
 .hero {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   min-height: calc(100vh - var(--navbar-height));
 
   &__wrapper {
@@ -11,17 +11,17 @@
   }
 
   &__left-content {
-    position: relative;
     display: flex;
-    flex: 1;
     flex-direction: column;
+    flex: 1;
     height: 100%;
+    position: relative;
   }
 
   &__title {
+    color: var(--clr-dark);
     font-size: 2.5rem;
     font-weight: bold;
-    color: var(--clr-dark);
     margin-bottom: 1.5rem;
   }
 
@@ -32,14 +32,14 @@
   }
 
   &__ca-btn {
-    color: var(--clr-text-light);
-    display: inline-block;
     background-color: var(--clr-dark);
     border-radius: 0.2rem;
-    width: 12rem;
+    color: var(--clr-text-light);
+    display: inline-block;
     padding: 1rem 2rem;
-    transition: var(--transition);
     text-align: center;
+    transition: var(--transition);
+    width: 12rem;
 
     &:hover {
       background-color: var(--clr-medium);
@@ -48,19 +48,19 @@
   }
 
   &__right-content {
-    position: relative;
-    flex: 1;
-    display: flex;
     align-items: center;
+    display: flex;
+    flex: 1;
     justify-content: flex-end;
+    position: relative;
   }
 
   &__image-small {
+    border-radius: 5rem 1rem 1rem 1rem;
+    bottom: 0;
     height: 15rem;
     position: absolute;
-    bottom: 0;
     right: 5rem;
-    border-radius: 5rem 1rem 1rem 1rem;
   }
 
   &__image-big {
@@ -72,6 +72,7 @@
 @media screen and (max-width: 830px) {
   .hero {
     min-height: 60vh;
+
     &__wrapper {
       flex-direction: column;
     }
@@ -85,9 +86,9 @@
     }
 
     &__left-content {
+      align-items: center;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
     }
 
     &__right-content {

@@ -1,9 +1,9 @@
 .footer {
+  align-items: center;
   background-color: var(--clr-footer);
   display: flex;
-  align-items: center;
-  justify-content: center;
   height: var(--footer-height);
+  justify-content: center;
 
   &__copyright {
     color: var(--clr-text-light);
